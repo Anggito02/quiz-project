@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { LeaderboardTable, type LeaderboardEntry } from "@/components/leaderboard-table";
+import { type LeaderboardEntry } from "@/components/leaderboard-table";
+import { ResultView } from "@/components/result-view";
 import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
 
@@ -31,10 +31,7 @@ export default async function AttemptPage({
 
   if (!attempt) notFound();
 
-  const [{ data: quiz }, { data: board }] = await Promise.all([
-    supabase.from("quizzes").select("title").eq("id", quizId).maybeSingle(),
-    supabase.rpc("quiz_leaderboard", { p_quiz_id: quizId }),
-  ]);
+  const { data: board } = await supabase.rpc("quiz_leaderboard", { p_quiz_id: quizId });
 
   const incorrect = attempt.question_count - attempt.correct_count;
   const entries: LeaderboardEntry[] = ((board ?? []) as BoardRow[]).map((row) => ({
@@ -46,22 +43,16 @@ export default async function AttemptPage({
   }));
 
   return (
-    <main className="page">
-      <p>
-        <Link className="btn btn-primary" href="/quizzes">
-          Back to quizzes
-        </Link>
-      </p>
-      <p className="mt-6">
-        <Link href={`/quizzes/${quizId}`}>{quiz?.title ?? "Quiz"}</Link>
-      </p>
-      <h1 className="mt-4">Result</h1>
-      <div className="result-summary">
-        <p className="result-score">{attempt.score}%</p>
-        <p className="badge badge-success">{attempt.correct_count} correct</p>
-        <p className="badge badge-error">{incorrect} incorrect</p>
-      </div>
-      <LeaderboardTable entries={entries} currentUserId={profile.id} valueHeading="Score" />
-    </main>
+    <ResultView
+      actions={[{ href: "/quizzes", label: "Back to quizzes" }]}
+      correct={attempt.correct_count}
+      incorrect={incorrect}
+      badge={`${attempt.score}%`}
+      caption={`${attempt.question_count} answered.`}
+      entries={entries}
+      currentUserId={profile.id}
+      valueHeading="Score"
+      summary="Best score for each student. The top 100 are shown."
+    />
   );
 }

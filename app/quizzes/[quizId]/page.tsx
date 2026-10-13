@@ -54,7 +54,7 @@ export default async function TakeQuizPage({ params }: { params: Promise<{ quizI
   const attempts = attemptData ?? [];
 
   return (
-    <main className="page">
+    <main className="page quiz-detail">
       <p>
         <Link href="/quizzes">All quizzes</Link>
       </p>

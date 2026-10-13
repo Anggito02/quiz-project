@@ -34,27 +34,29 @@ export default async function UnlimitedLeaderboardPage({
 
   return (
     <main className="page">
-      <p>
-        <Link href="/unlimited">Unlimited</Link>
-      </p>
-      <h1 className="mt-4">{duration} minute board</h1>
-      <p className="tab-row">
-        {[5, 10, 20].map((value) => (
-          <Link
-            className={duration === value ? "tab is-active" : "tab"}
-            href={`/unlimited/leaderboard?minutes=${value}`}
-            key={value}
-          >
-            {value} minutes
-          </Link>
-        ))}
-      </p>
-      <LeaderboardTable
-        entries={entries}
-        currentUserId={profile.id}
-        valueHeading="Correct"
-        summary="Ranked by correct answers. The top 100 are shown. A run only appears on the board for its own time limit."
-      />
+      <section className="board-panel">
+        <p>
+          <Link href="/unlimited">Unlimited</Link>
+        </p>
+        <h1 className="mt-4">{duration} minute board</h1>
+        <p className="tab-row">
+          {[5, 10, 20].map((value) => (
+            <Link
+              className={duration === value ? "tab is-active" : "tab"}
+              href={`/unlimited/leaderboard?minutes=${value}`}
+              key={value}
+            >
+              {value} minutes
+            </Link>
+          ))}
+        </p>
+        <LeaderboardTable
+          entries={entries}
+          currentUserId={profile.id}
+          valueHeading="Correct"
+          summary="Ranked by correct answers. The top 100 are shown. A run only appears on the board for its own time limit."
+        />
+      </section>
     </main>
   );
 }

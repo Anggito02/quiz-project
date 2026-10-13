@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import {
   BookOpen,
   ClipboardList,
@@ -14,6 +14,7 @@ import {
   PenLine,
   Timer,
   Trophy,
+  User,
   Users,
   X,
 } from "lucide-react";
@@ -21,6 +22,24 @@ import { logOut } from "@/app/auth/logout";
 import type { SessionProfile } from "@/lib/session";
 import { AmbientBackdrop } from "./ambient-backdrop";
 import { KuisLockup, KuisMark } from "./kuis-mark";
+
+const collapsedListeners = new Set<() => void>();
+
+function subscribeCollapsed(listener: () => void) {
+  collapsedListeners.add(listener);
+  return () => {
+    collapsedListeners.delete(listener);
+  };
+}
+
+function readCollapsed() {
+  return window.localStorage.getItem("kuis-sidebar-collapsed") === "1";
+}
+
+function writeCollapsed(value: boolean) {
+  window.localStorage.setItem("kuis-sidebar-collapsed", value ? "1" : "0");
+  collapsedListeners.forEach((listener) => listener());
+}
 
 function navClass(pathname: string, href: string) {
   const active = pathname === href || pathname.startsWith(`${href}/`);
@@ -136,6 +155,95 @@ function Sidebar({
   );
 }
 
+function LearnerLinks({
+  profile,
+  pathname,
+  onNavigate,
+}: {
+  profile: SessionProfile;
+  pathname: string;
+  onNavigate?: () => void;
+}) {
+  const item = (href: string, label: string, active = pathname === href || pathname.startsWith(`${href}/`)) => (
+    <Link className={active ? "learner-nav-link is-active" : "learner-nav-link"} href={href} onClick={onNavigate}>
+      {label}
+    </Link>
+  );
+
+  return (
+    <>
+      {item("/quizzes", "Quizzes")}
+      {item("/unlimited", "Unlimited")}
+      {item("/leaderboard", "Leaderboard")}
+      {profile.role === "admin" ? item("/admin/quizzes", "Admin", pathname.startsWith("/admin")) : null}
+    </>
+  );
+}
+
+function LearnerHeader({ profile, pathname }: { profile: SessionProfile; pathname: string }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <>
+      {menuOpen ? (
+        <button
+          className="sidebar-backdrop"
+          type="button"
+          aria-label="Close menu"
+          onClick={() => setMenuOpen(false)}
+        />
+      ) : null}
+      <aside
+        id="learner-drawer"
+        className={menuOpen ? "learner-drawer is-open" : "learner-drawer"}
+        inert={!menuOpen}
+      >
+        <div className="learner-drawer-head">
+          <Link href="/" aria-label="Dirman Quiz home" onClick={() => setMenuOpen(false)}>
+            <KuisLockup tone="onDark" markSize={36} />
+          </Link>
+          <button className="btn btn-ghost btn-sm" type="button" onClick={() => setMenuOpen(false)}>
+            <X aria-hidden="true" size={18} />
+            <span className="sr-only">Close menu</span>
+          </button>
+        </div>
+        <nav className="learner-nav" aria-label="Main">
+          <LearnerLinks profile={profile} pathname={pathname} onNavigate={() => setMenuOpen(false)} />
+        </nav>
+      </aside>
+      <header className="learner-header">
+        <button
+          className="btn btn-ghost btn-sm learner-menu"
+          type="button"
+          aria-expanded={menuOpen}
+          aria-controls="learner-drawer"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X aria-hidden="true" size={18} /> : <Menu aria-hidden="true" size={18} />}
+          <span className="sr-only">{menuOpen ? "Close menu" : "Open menu"}</span>
+        </button>
+        <Link href="/" aria-label="Dirman Quiz home">
+          <KuisLockup tone="onDark" markSize={40} />
+        </Link>
+        <nav className="learner-nav" aria-label="Main">
+          <LearnerLinks profile={profile} pathname={pathname} />
+        </nav>
+        <div className="topbar-actions">
+          <span className="user-pill">
+            <User aria-hidden="true" size={16} />
+            <span>{profile.displayName}</span>
+          </span>
+          <form action={logOut}>
+            <button className="btn btn-ghost btn-sm" type="submit">
+              Log out
+            </button>
+          </form>
+        </div>
+      </header>
+    </>
+  );
+}
+
 function Footer() {
   return (
     <footer className="site-footer">
@@ -158,19 +266,12 @@ export function AppChrome({
 }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
+  const collapsed = useSyncExternalStore(subscribeCollapsed, readCollapsed, () => false);
   const marketing = pathname === "/" || pathname === "/login" || pathname === "/signup";
-
-  useEffect(() => {
-    setCollapsed(window.localStorage.getItem("kuis-sidebar-collapsed") === "1");
-  }, []);
+  const admin = pathname.startsWith("/admin");
 
   function toggleCollapsed() {
-    setCollapsed((current) => {
-      const next = !current;
-      window.localStorage.setItem("kuis-sidebar-collapsed", next ? "1" : "0");
-      return next;
-    });
+    writeCollapsed(!collapsed);
   }
 
   if (marketing || !profile) {
@@ -183,6 +284,17 @@ export function AppChrome({
           </Link>
           <AccountActions profile={profile} />
         </header>
+        {children}
+        <Footer />
+      </div>
+    );
+  }
+
+  if (!admin) {
+    return (
+      <div className="learner-frame">
+        <AmbientBackdrop />
+        <LearnerHeader profile={profile} pathname={pathname} />
         {children}
         <Footer />
       </div>

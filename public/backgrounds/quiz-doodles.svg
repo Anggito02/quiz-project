@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" fill="none">
+  <g stroke="#ffffff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <rect x="36" y="28" width="72" height="92" rx="8"/>
+    <path d="M52 28v-8a8 8 0 0 1 8-8h24a8 8 0 0 1 8 8v8"/>
+    <path d="M52 58h40M52 74h28M52 90h34"/>
+    <path d="M168 46l46 14-8 28-46-14z"/>
+    <path d="M206 88l8 22M214 110l-10 8 16 2"/>
+    <path d="M300 36c0-14 22-14 22 2 0 12-11 14-11 26"/>
+    <circle cx="311" cy="84" r="2.2" fill="#ffffff" stroke="none"/>
+    <rect x="360" y="48" width="78" height="52" rx="8"/>
+    <path d="M374 66h50M374 80h32"/>
+    <circle cx="92" cy="196" r="22"/>
+    <path d="M92 184v14l8 6"/>
+    <path d="M168 168h86v64H168z"/>
+    <path d="M184 188h54M184 206h36"/>
+    <path d="M300 176l10 22 24 3-18 16 5 24-21-12-21 12 5-24-18-16 24-3z"/>
+    <rect x="392" y="168" width="52" height="64" rx="6"/>
+    <path d="M404 188h28M404 204h20M404 220h24"/>
+    <path d="M40 300h70l8 16H48z"/>
+    <path d="M56 300v-16h38v16"/>
+    <text x="168" y="292" fill="#ffffff" stroke="none" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="700" letter-spacing="4">QUIZ</text>
+    <circle cx="330" cy="286" r="18"/>
+    <path d="M322 286l6 6 12-14"/>
+    <path d="M400 270c18 8 28 24 22 40-8 18-34 16-42-2"/>
+    <path d="M48 390h64v40H48z"/>
+    <path d="M48 404h64M64 390v40"/>
+    <path d="M160 372c18-16 46-8 46 14 0 18-16 28-23 40"/>
+    <circle cx="183" cy="442" r="2.2" fill="#ffffff" stroke="none"/>
+    <rect x="248" y="360" width="70" height="48" rx="8"/>
+    <path d="M262 378h42M262 392h24"/>
+    <path d="M368 368h56M368 386h40M368 404h48"/>
+    <circle cx="430" cy="430" r="16"/>
+    <path d="M430 418v8M430 434h.1"/>
+  </g>
+</svg>

@@ -41,11 +41,18 @@ export default async function QuizLeaderboardPage({
 
   return (
     <main className="page">
-      <p>
-        <Link href={`/quizzes/${quizId}`}>{quiz.title}</Link>
-      </p>
-      <h1 className="mt-4">Leaderboard</h1>
-      <LeaderboardTable entries={entries} currentUserId={profile.id} valueHeading="Score" />
+      <section className="board-panel">
+        <p>
+          <Link href={`/quizzes/${quizId}`}>{quiz.title}</Link>
+        </p>
+        <h1 className="mt-4">Leaderboard</h1>
+        <LeaderboardTable
+          entries={entries}
+          currentUserId={profile.id}
+          valueHeading="Score"
+          showHeading={false}
+        />
+      </section>
     </main>
   );
 }

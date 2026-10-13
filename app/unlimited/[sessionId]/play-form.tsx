@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { AnswerOptions } from "@/components/answer-options";
 import { LearnerShell } from "@/components/learner-shell";
 import { submitUnlimited, type UnlimitedState } from "../actions";
@@ -24,18 +24,26 @@ export function UnlimitedPlayForm({
   endsAt: string;
   questions: Question[];
 }) {
-  const router = useRouter();
   const [state, action, pending] = useActionState(submitUnlimited, initialState);
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string[]>>({});
   const [remaining, setRemaining] = useState(() =>
     Math.max(0, new Date(endsAt).getTime() - Date.now()),
   );
+  const [timeUp, setTimeUp] = useState(false);
   const question = questions[index];
   const answersRef = useRef(answers);
   const questionIdRef = useRef(question?.id);
   const formRef = useRef<HTMLFormElement>(null);
   const sent = useRef(false);
+  const armed = useRef(false);
+  const showTimeUp = timeUp && !state.error;
+
+  useEffect(() => {
+    if (!state.error) return;
+    sent.current = false;
+    armed.current = false;
+  }, [state.error]);
 
   useEffect(() => {
     answersRef.current = answers;
@@ -52,16 +60,27 @@ export function UnlimitedPlayForm({
   }
 
   useEffect(() => {
+    let submitTimer = 0;
     const timer = window.setInterval(() => {
       const next = Math.max(0, new Date(endsAt).getTime() - Date.now());
       setRemaining(next);
-      if (next === 0 && !sent.current) {
-        sent.current = true;
-        includeCurrent();
-        formRef.current?.requestSubmit();
+      if (next === 0 && !armed.current && !sent.current) {
+        armed.current = true;
+        window.clearInterval(timer);
+        setTimeUp(true);
+        submitTimer = window.setTimeout(() => {
+          const questionId = questionIdRef.current;
+          if (questionId && !(questionId in answersRef.current)) {
+            answersRef.current = { ...answersRef.current, [questionId]: [] };
+          }
+          formRef.current?.requestSubmit();
+        }, 2500);
       }
     }, 250);
-    return () => window.clearInterval(timer);
+    return () => {
+      window.clearInterval(timer);
+      window.clearTimeout(submitTimer);
+    };
   }, [endsAt]);
 
   function remember(questionId: string, optionIds: string[]) {
@@ -74,8 +93,13 @@ export function UnlimitedPlayForm({
 
   if (!question) {
     return (
-      <LearnerShell progress={0} counter="No questions" onExit={() => router.push("/unlimited")}>
-        <p className="learner-stage">There are no questions in this run.</p>
+      <LearnerShell progress={0} counter="No questions">
+        <div className="learner-stage">
+          <p>There are no questions in this run.</p>
+          <Link className="btn btn-ghost justify-self-start" href="/unlimited">
+            Back to Unlimited
+          </Link>
+        </div>
       </LearnerShell>
     );
   }
@@ -83,8 +107,10 @@ export function UnlimitedPlayForm({
   const selected = answers[question.id] ?? [];
   const minutes = Math.floor(remaining / 60000);
   const seconds = Math.floor((remaining % 60000) / 1000);
-  const timerLow = remaining < 60000;
-  const clock = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  const timerLow = remaining < 60000 && !showTimeUp;
+  const clock = showTimeUp
+    ? "00:00"
+    : `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
   return (
     <LearnerShell
@@ -92,21 +118,22 @@ export function UnlimitedPlayForm({
       counter={`Question ${index + 1} of ${questions.length}`}
       timer={timerLow ? `${clock} · Less than a minute left` : clock}
       timerLow={timerLow}
-      onExit={() => router.push("/unlimited")}
     >
       <form
         ref={formRef}
         className="learner-stage"
         action={(formData) => {
+          if (sent.current) return;
+          sent.current = true;
           formData.set("answers", JSON.stringify(answersRef.current));
           return action(formData);
         }}
       >
         <input type="hidden" name="sessionId" value={sessionId} />
-        <fieldset className="question-panel">
-          <legend>
+        <div className="question-panel" role="group" aria-labelledby={`q-${question.id}`}>
+          <h2 className="question-title" id={`q-${question.id}`}>
             {index + 1}. {question.prompt}
-          </legend>
+          </h2>
           <p className="learner-progress mt-3">
             {question.type === "single" ? "Choose one answer." : "Choose every correct answer."}
           </p>
@@ -115,7 +142,9 @@ export function UnlimitedPlayForm({
             type={question.type}
             options={question.options}
             selected={selected}
+            disabled={showTimeUp || pending}
             onChange={(optionId) => {
+              if (showTimeUp) return;
               if (question.type === "single") {
                 remember(question.id, [optionId]);
                 return;
@@ -126,13 +155,14 @@ export function UnlimitedPlayForm({
               remember(question.id, [...next]);
             }}
           />
-        </fieldset>
+        </div>
         {state.error ? <p className="error-text">{state.error}</p> : null}
         <div className="flex flex-wrap gap-3">
           {index < questions.length - 1 ? (
             <button
               className="btn btn-quiz"
               type="button"
+              disabled={showTimeUp || pending}
               onClick={() => {
                 if (!(question.id in answersRef.current)) remember(question.id, selected);
                 setIndex((current) => current + 1);
@@ -144,13 +174,18 @@ export function UnlimitedPlayForm({
           <button
             className={index < questions.length - 1 ? "btn btn-ghost" : "btn btn-quiz"}
             type="submit"
-            disabled={pending}
+            disabled={pending || showTimeUp}
             onClick={includeCurrent}
           >
             Finish
           </button>
         </div>
       </form>
+      {showTimeUp ? (
+        <div className="timeup" role="status" aria-live="assertive">
+          <p className="timeup-title">Time&apos;s up!</p>
+        </div>
+      ) : null}
     </LearnerShell>
   );
 }

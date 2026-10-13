@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { BookOpen, Pencil } from "lucide-react";
 import { ResetBoardForms } from "@/app/admin/leaderboard/reset-forms";
 import { createClient } from "@/lib/supabase/server";
 import { LeaderboardTable, type LeaderboardEntry } from "./leaderboard-table";
-import { QuizBoardSelect } from "./quiz-board-select";
+import { QuizBoardPicker } from "./quiz-board-picker";
 
 type QuizRow = {
   rank: number;
@@ -86,6 +87,7 @@ export async function LeaderboardView({
   currentUserId,
   showReset = false,
   notice,
+  intro = "Published quiz boards and Unlimited time boards.",
 }: {
   basePath: string;
   quizId?: string;
@@ -95,6 +97,7 @@ export async function LeaderboardView({
   currentUserId: string;
   showReset?: boolean;
   notice?: string;
+  intro?: string;
 }) {
   const supabase = await createClient();
   const [{ data: quizData }, { data: classData }] = await Promise.all([
@@ -182,85 +185,103 @@ export async function LeaderboardView({
       ? "Best score for each student. The top 100 are shown."
       : "Ranked by correct answers. The top 100 are shown. A run only appears on the board for its own time limit.";
 
+  const boardTitle = activeQuiz
+    ? activeQuiz.title
+    : activeMinutes
+      ? `${activeMinutes} minute board`
+      : "Leaderboard";
+
   return (
-    <>
-      {notice ? <p className="notice notice-success mt-4">{notice}</p> : null}
-      {courseGroups.length > 0 ? (
-        <nav className="tab-row" aria-label="Courses">
-          {courseGroups.map((group) => (
-            <Link
-              className={activeQuiz && activeGroup?.id === group.id ? "tab is-active" : "tab"}
-              href={boardHref(basePath, {
-                course: group.id,
-                quiz: group.quizzes[0]?.id,
-                classId: activeClass?.id,
-              })}
-              key={group.id}
-            >
-              {group.name}
-            </Link>
-          ))}
-        </nav>
-      ) : null}
-      <nav className="tab-row" aria-label="Classes">
-        <Link
-          className={activeClass ? "tab" : "tab is-active"}
-          href={boardHref(basePath, {
-            course: activeQuiz ? activeGroup?.id : undefined,
-            quiz: activeQuiz?.id,
-            minutes: activeQuiz ? undefined : activeMinutes,
-          })}
-        >
-          All classes
-        </Link>
-        {classes.map((item) => (
+    <div className="board-stack">
+      <section className="board-panel">
+        <h1>Leaderboard</h1>
+        <p className="lede mt-2">{intro}</p>
+        {notice ? <p className="notice notice-success mt-4">{notice}</p> : null}
+        {courseGroups.length > 0 ? (
+          <nav className="tab-row" aria-label="Courses">
+            {courseGroups.map((group) => (
+              <Link
+                className={activeQuiz && activeGroup?.id === group.id ? "tab is-active" : "tab"}
+                href={boardHref(basePath, {
+                  course: group.id,
+                  quiz: group.quizzes[0]?.id,
+                  classId: activeClass?.id,
+                })}
+                key={group.id}
+              >
+                <BookOpen aria-hidden="true" size={14} />
+                {group.name}
+              </Link>
+            ))}
+          </nav>
+        ) : null}
+        <nav className="tab-row" aria-label="Classes">
           <Link
-            className={activeClass?.id === item.id ? "tab is-active" : "tab"}
+            className={activeClass ? "class-chip" : "class-chip is-active"}
             href={boardHref(basePath, {
               course: activeQuiz ? activeGroup?.id : undefined,
               quiz: activeQuiz?.id,
               minutes: activeQuiz ? undefined : activeMinutes,
-              classId: item.id,
             })}
-            key={item.id}
           >
-            {item.name}
+            All classes
           </Link>
-        ))}
-      </nav>
-      {activeQuiz && activeGroup ? (
-        <QuizBoardSelect
+          {classes.map((item) => (
+            <Link
+              className={activeClass?.id === item.id ? "class-chip is-active" : "class-chip"}
+              href={boardHref(basePath, {
+                course: activeQuiz ? activeGroup?.id : undefined,
+                quiz: activeQuiz?.id,
+                minutes: activeQuiz ? undefined : activeMinutes,
+                classId: item.id,
+              })}
+              key={item.id}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+        <QuizBoardPicker
+          key={activeQuiz?.id ?? `minutes-${activeMinutes ?? "none"}`}
           basePath={basePath}
-          quizzes={activeGroup.quizzes}
-          quizId={activeQuiz.id}
-          course={activeGroup.id}
+          quizzes={quizzes}
+          quizId={activeQuiz?.id}
           classId={activeClass?.id}
         />
-      ) : null}
-      <nav className="tab-row" aria-label="Unlimited boards">
-        {[5, 10, 20].map((value) => (
-          <Link
-            className={!activeQuiz && activeMinutes === value ? "tab is-active" : "tab"}
-            href={boardHref(basePath, { minutes: value, classId: activeClass?.id })}
-            key={value}
-          >
-            {value} minutes
-          </Link>
-        ))}
-      </nav>
-      {loadError ? <p className="error-text mt-4">{loadError}</p> : null}
-      <h2 className="mt-8">
-        {activeQuiz ? activeQuiz.title : activeMinutes ? `${activeMinutes} minute board` : "Leaderboard"}
-      </h2>
-      <LeaderboardTable
-        entries={entries}
-        currentUserId={currentUserId}
-        valueHeading={valueHeading}
-        summary={summary}
-      />
-      {showReset && (activeQuiz || activeMinutes) ? (
-        <ResetBoardForms quizId={activeQuiz?.id} minutes={activeMinutes} />
-      ) : null}
-    </>
+        <nav className="tab-row" aria-label="Unlimited boards">
+          {[5, 10, 20].map((value) => (
+            <Link
+              className={!activeQuiz && activeMinutes === value ? "tab is-active" : "tab"}
+              href={boardHref(basePath, { minutes: value, classId: activeClass?.id })}
+              key={value}
+            >
+              {value} minutes
+            </Link>
+          ))}
+        </nav>
+      </section>
+      <section className="board-panel">
+        <div className="board-title-row">
+          <h2>{boardTitle}</h2>
+          {activeQuiz ? (
+            <Link href={`/quizzes/${activeQuiz.id}`} aria-label={`Open ${activeQuiz.title}`}>
+              <Pencil aria-hidden="true" size={18} />
+            </Link>
+          ) : null}
+        </div>
+        {loadError ? <p className="error-text mt-4">{loadError}</p> : null}
+        <h3 className="mt-6">Leaderboard</h3>
+        <LeaderboardTable
+          entries={entries}
+          currentUserId={currentUserId}
+          valueHeading={valueHeading}
+          summary={summary}
+          showHeading={false}
+        />
+        {showReset && (activeQuiz || activeMinutes) ? (
+          <ResetBoardForms quizId={activeQuiz?.id} minutes={activeMinutes} />
+        ) : null}
+      </section>
+    </div>
   );
 }

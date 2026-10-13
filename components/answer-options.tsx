@@ -14,12 +14,14 @@ export function AnswerOptions({
   type,
   options,
   selected,
+  disabled = false,
   onChange,
 }: {
   questionId: string;
   type: "single" | "multi";
   options: { id: string; label: string }[];
   selected: string[];
+  disabled?: boolean;
   onChange: (optionId: string) => void;
 }) {
   return (
@@ -35,11 +37,11 @@ export function AnswerOptions({
               type={type === "single" ? "radio" : "checkbox"}
               name={questionId}
               checked={isSelected}
+              disabled={disabled}
               onChange={() => onChange(option.id)}
             />
             <span className="answer-mark">{LETTERS[index] ?? index + 1}</span>
             <span className="answer-copy">{option.label}</span>
-            {isSelected ? <span className="answer-state">Selected</span> : null}
           </label>
         );
       })}

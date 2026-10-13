@@ -27,11 +27,7 @@ export default async function AdminLeaderboardPage({
 
   return (
     <main className="page">
-      <h1>Leaderboard</h1>
-      <p className="lede mt-4">
-        Review a board, then clear its scores. Use this to remove dummy results while testing.
-      </p>
-      {errorText ? <p className="error-text mt-4">{errorText}</p> : null}
+      {errorText ? <p className="error-text">{errorText}</p> : null}
       <LeaderboardView
         basePath="/admin/leaderboard"
         quizId={quiz}
@@ -41,6 +37,7 @@ export default async function AdminLeaderboardPage({
         currentUserId={profile.id}
         showReset
         notice={notice}
+        intro="Review a board, then clear its scores. Use this to remove dummy results while testing."
       />
     </main>
   );

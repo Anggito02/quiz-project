@@ -319,12 +319,20 @@ Rules:
   Max content width: 1280px
   Topbar: kuis full lockup left, search center-right, account/actions right
 
+### Learner frame
+  Quizzes, Unlimited, Leaderboard, and result pages use a full-width dark frame
+  No sidebar. Header: lockup, Quizzes / Unlimited / Leaderboard (Admin for admins), user pill, Log out
+  Background: purple field, blurred color blobs, and two drifting quiz-doodle layers
+  Panels: dark glass with a purple glow. Admin routes keep the light sidebar workspace
+
 ### Learner quiz shell (MODE 2)
-  Dark/themed background fills the viewport
-  Topbar (44px): kuis icon left | progress bar center | question X/Y right
+  Dark/themed background fills the viewport, with the same moving doodle field
+  Topbar: kuis icon left | progress bar center | question X/Y and timer right
+  Leave a run with Finish or Submit. There is no Exit control
+  A timed run shows Time's up before the result page
+  Question title sits inside the panel and wraps. Selected answers use border and highlight only
   Question panel: centered, max-width 720px, large type, strong visual grouping
   Answer grid: 2-col desktop; 1-col mobile when tiles would be cramped
-  Secondary controls (sound, exit): available but visually subordinate
   No workspace nav, sidebars, or report elements during active answering
 
 ### Join page (MODE 2 → 3)

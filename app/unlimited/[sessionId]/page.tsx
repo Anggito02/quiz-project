@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { LeaderboardTable, type LeaderboardEntry } from "@/components/leaderboard-table";
+import { type LeaderboardEntry } from "@/components/leaderboard-table";
+import { ResultView } from "@/components/result-view";
 import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
 import { UnlimitedPlayForm } from "./play-form";
@@ -52,30 +52,20 @@ export default async function UnlimitedSessionPage({
     }));
 
     return (
-      <main className="page">
-        <p className="flex flex-wrap gap-3">
-          <Link className="btn btn-primary" href="/quizzes">
-            Back to quizzes
-          </Link>
-          <Link className="btn btn-ghost" href="/unlimited">
-            Back to Unlimited
-          </Link>
-        </p>
-        <h1 className="mt-6">Result</h1>
-        <div className="result-summary">
-          <p className="badge badge-success">{session.correct_count} correct</p>
-          <p className="badge badge-error">{incorrect} incorrect</p>
-          <p className="muted">
-            {session.question_count} answered in a {session.duration_minutes} minute run.
-          </p>
-        </div>
-        <LeaderboardTable
-          entries={entries}
-          currentUserId={profile.id}
-          valueHeading="Correct"
-          summary="Ranked by correct answers. The top 100 are shown. A run only appears on the board for its own time limit."
-        />
-      </main>
+      <ResultView
+        actions={[
+          { href: "/quizzes", label: "Back to quizzes" },
+          { href: "/unlimited", label: "Back to Unlimited" },
+        ]}
+        correct={session.correct_count}
+        incorrect={incorrect}
+        badge={String(session.question_count)}
+        caption={`${session.question_count} answered in a ${session.duration_minutes} minute run.`}
+        entries={entries}
+        currentUserId={profile.id}
+        valueHeading="Correct"
+        summary="Ranked by correct answers. The top 100 are shown. A run only appears on the board for its own time limit."
+      />
     );
   }
 

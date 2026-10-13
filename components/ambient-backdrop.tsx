@@ -5,6 +5,8 @@ export function AmbientBackdrop() {
       <span />
       <span />
       <span />
+      <div className="ambient-doodle ambient-doodle-a" />
+      <div className="ambient-doodle ambient-doodle-b" />
     </div>
   );
 }

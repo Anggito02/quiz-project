@@ -16,9 +16,10 @@ const initialState: SubmitState = {};
 
 export function TakeQuizForm({ quizId, questions }: { quizId: string; questions: Question[] }) {
   const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
   const [state, action, pending] = useActionState(submitQuiz, initialState);
   const [answers, setAnswers] = useState<Record<string, string[]>>({});
-  const answered = questions.filter((question) => (answers[question.id] ?? []).length > 0).length;
+  const question = questions[index];
 
   function setSingle(questionId: string, optionId: string) {
     setAnswers((current) => ({ ...current, [questionId]: [optionId] }));
@@ -35,7 +36,7 @@ export function TakeQuizForm({ quizId, questions }: { quizId: string; questions:
 
   if (!open) {
     return (
-      <button className="btn btn-quiz" type="button" onClick={() => setOpen(true)}>
+      <button className="btn btn-quiz quiz-start" type="button" onClick={() => setOpen(true)}>
         Start quiz
       </button>
     );
@@ -43,18 +44,17 @@ export function TakeQuizForm({ quizId, questions }: { quizId: string; questions:
 
   return (
     <LearnerShell
-      progress={questions.length ? answered / questions.length : 0}
-      counter={`${answered} of ${questions.length} answered`}
-      onExit={() => setOpen(false)}
+      progress={questions.length ? (index + 1) / questions.length : 0}
+      counter={`Question ${index + 1} of ${questions.length}`}
     >
       <form action={action} className="learner-stage">
         <input type="hidden" name="quizId" value={quizId} />
         <input type="hidden" name="answers" value={JSON.stringify(answers)} />
-        {questions.map((question, index) => (
-          <fieldset className="question-panel" key={question.id}>
-            <legend>
+        {question ? (
+          <div className="question-panel" role="group" aria-labelledby={`q-${question.id}`}>
+            <h2 className="question-title" id={`q-${question.id}`}>
               {index + 1}. {question.prompt}
-            </legend>
+            </h2>
             <p className="learner-progress mt-3">
               {question.type === "single" ? "Choose one answer." : "Choose every correct answer."}
             </p>
@@ -69,12 +69,20 @@ export function TakeQuizForm({ quizId, questions }: { quizId: string; questions:
                   : toggleMulti(question.id, optionId)
               }
             />
-          </fieldset>
-        ))}
+          </div>
+        ) : null}
         {state.error ? <p className="error-text">{state.error}</p> : null}
-        <button className="btn btn-quiz justify-self-start" type="submit" disabled={pending}>
-          Submit quiz
-        </button>
+        <div className="flex flex-wrap gap-3">
+          {index < questions.length - 1 ? (
+            <button className="btn btn-quiz" type="button" onClick={() => setIndex((current) => current + 1)}>
+              Next question
+            </button>
+          ) : (
+            <button className="btn btn-quiz" type="submit" disabled={pending}>
+              Submit quiz
+            </button>
+          )}
+        </div>
       </form>
     </LearnerShell>
   );

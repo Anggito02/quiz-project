@@ -15,8 +15,6 @@ export default async function LeaderboardPage({
 
   return (
     <main className="page">
-      <h1>Leaderboard</h1>
-      <p className="lede mt-4">Published quiz boards and Unlimited time boards.</p>
       <LeaderboardView
         basePath="/leaderboard"
         quizId={quiz}
