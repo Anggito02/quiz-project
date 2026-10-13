@@ -1,0 +1,416 @@
+{
+  "communities": {
+    "0": [
+      "app_admin_quizzes_quizid_actions",
+      "app_admin_quizzes_quizid_actions_deletequestion",
+      "app_admin_quizzes_quizid_actions_editorstate",
+      "app_admin_quizzes_quizid_actions_importquestions",
+      "app_admin_quizzes_quizid_actions_movequestion",
+      "app_admin_quizzes_quizid_actions_quizpath",
+      "app_admin_quizzes_quizid_actions_readoptions",
+      "app_admin_quizzes_quizid_actions_requireadmin",
+      "app_admin_quizzes_quizid_actions_savequestion",
+      "app_admin_quizzes_quizid_actions_updatequiz",
+      "app_admin_quizzes_quizid_import_form",
+      "app_admin_quizzes_quizid_import_form_importquestionsform",
+      "app_admin_quizzes_quizid_import_form_initialstate",
+      "app_admin_quizzes_quizid_page",
+      "app_admin_quizzes_quizid_page_optionrow",
+      "app_admin_quizzes_quizid_page_questionrow",
+      "app_admin_quizzes_quizid_page_quizeditorpage",
+      "app_admin_quizzes_quizid_question_form",
+      "app_admin_quizzes_quizid_question_form_blankoptions",
+      "app_admin_quizzes_quizid_question_form_initialstate",
+      "app_admin_quizzes_quizid_question_form_questionform",
+      "app_admin_quizzes_quizid_question_form_questionform_setquestiontype",
+      "app_admin_quizzes_quizid_question_form_questionform_togglecorrect",
+      "app_admin_quizzes_quizid_quiz_settings_form",
+      "app_admin_quizzes_quizid_quiz_settings_form_initialstate",
+      "app_admin_quizzes_quizid_quiz_settings_form_quizsettingsform",
+      "lib_quiz_excel",
+      "lib_quiz_excel_celltext",
+      "lib_quiz_excel_headers",
+      "lib_quiz_excel_importedquestion",
+      "lib_quiz_excel_max_import_bytes",
+      "lib_quiz_excel_max_import_questions",
+      "lib_quiz_excel_option_letters",
+      "lib_quiz_excel_parsequizworkbook",
+      "lib_quiz_validation",
+      "lib_quiz_validation_cleanoptions",
+      "lib_quiz_validation_optiondraft",
+      "lib_quiz_validation_questiontype",
+      "lib_quiz_validation_validatequestion",
+      "ref_exceljs",
+      "ref_react"
+    ],
+    "1": [
+      "eslint_config",
+      "eslint_config_eslintconfig",
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_config_next",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version",
+      "ref_eslint",
+      "ref_eslint_config_next",
+      "ref_react_dom",
+      "ref_supabase_supabase_js",
+      "ref_tailwindcss",
+      "ref_tailwindcss_postcss",
+      "ref_types_node",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript",
+      "scripts_tmp_auth_check",
+      "scripts_tmp_auth_check_admin",
+      "scripts_tmp_auth_check_user"
+    ],
+    "2": [
+      "app_admin_layout",
+      "app_admin_layout_adminlayout",
+      "app_admin_quizzes_template_route",
+      "app_admin_quizzes_template_route_get",
+      "app_page",
+      "app_page_home",
+      "app_quizzes_page",
+      "app_quizzes_page_quizzespage",
+      "app_quizzes_quizid_attempts_attemptid_page",
+      "app_quizzes_quizid_attempts_attemptid_page_attemptpage",
+      "app_quizzes_quizid_attempts_attemptid_page_snapshotoption",
+      "app_quizzes_quizid_leaderboard_page",
+      "app_quizzes_quizid_leaderboard_page_boardrow",
+      "app_quizzes_quizid_leaderboard_page_formatwhen",
+      "app_quizzes_quizid_leaderboard_page_quizleaderboardpage",
+      "app_unlimited_leaderboard_page",
+      "app_unlimited_leaderboard_page_boardrow",
+      "app_unlimited_leaderboard_page_formatwhen",
+      "app_unlimited_leaderboard_page_unlimitedleaderboardpage",
+      "app_unlimited_page",
+      "app_unlimited_page_formatwhen",
+      "app_unlimited_page_unlimitedpage",
+      "lib_env",
+      "lib_env_getsupabaseenv",
+      "lib_quiz_excel_buildquiztemplate",
+      "lib_session",
+      "lib_session_getsessionprofile",
+      "lib_supabase_client",
+      "lib_supabase_client_createclient",
+      "lib_supabase_server",
+      "lib_supabase_server_createclient",
+      "ref_supabase_ssr"
+    ],
+    "3": [
+      "app_admin_quizzes_actions",
+      "app_admin_quizzes_actions_createquiz",
+      "app_admin_quizzes_actions_quizformstate",
+      "app_admin_quizzes_actions_requireadmin",
+      "app_admin_quizzes_actions_resolvecourseid",
+      "app_admin_quizzes_create_form",
+      "app_admin_quizzes_create_form_createquizform",
+      "app_admin_quizzes_create_form_initialstate",
+      "app_admin_quizzes_page",
+      "app_admin_quizzes_page_coursename",
+      "app_admin_quizzes_page_groupbycourse",
+      "app_admin_quizzes_page_quizbuilderpage",
+      "app_admin_quizzes_page_quizrow",
+      "next_config",
+      "next_config_nextconfig",
+      "proxy",
+      "proxy_config",
+      "proxy_proxy",
+      "ref_next"
+    ],
+    "4": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "5": [
+      "app_unlimited_actions",
+      "app_unlimited_actions_readanswers",
+      "app_unlimited_actions_startunlimited",
+      "app_unlimited_actions_submitunlimited",
+      "app_unlimited_actions_unlimitedstate",
+      "app_unlimited_sessionid_page",
+      "app_unlimited_sessionid_page_questionrow",
+      "app_unlimited_sessionid_page_snapshotoption",
+      "app_unlimited_sessionid_page_unlimitedsessionpage",
+      "app_unlimited_sessionid_play_form",
+      "app_unlimited_sessionid_play_form_initialstate",
+      "app_unlimited_sessionid_play_form_question",
+      "app_unlimited_sessionid_play_form_unlimitedplayform",
+      "app_unlimited_sessionid_play_form_unlimitedplayform_includecurrent",
+      "app_unlimited_sessionid_play_form_unlimitedplayform_remember",
+      "app_unlimited_setup_form",
+      "app_unlimited_setup_form_initialstate",
+      "app_unlimited_setup_form_unlimitedsetupform"
+    ],
+    "6": [
+      "app_admin_roster_actions",
+      "app_admin_roster_actions_addemail",
+      "app_admin_roster_actions_adminclient",
+      "app_admin_roster_actions_classidfromform",
+      "app_admin_roster_actions_removeemail",
+      "app_admin_roster_actions_rolefromform",
+      "app_admin_roster_actions_rosterstate",
+      "app_admin_roster_actions_updaterole",
+      "app_admin_roster_add_form",
+      "app_admin_roster_add_form_addemailform",
+      "app_admin_roster_add_form_initialstate",
+      "app_admin_roster_page",
+      "app_admin_roster_page_allowlistrow",
+      "app_admin_roster_page_rosterpage"
+    ],
+    "7": [
+      "app_auth_logout",
+      "app_auth_logout_logout",
+      "app_globals",
+      "app_layout",
+      "app_layout_metadata",
+      "app_layout_playfair",
+      "app_layout_rootlayout",
+      "app_layout_sourcesans",
+      "components_site_nav",
+      "components_site_nav_navclass",
+      "components_site_nav_sitenav",
+      "lib_session_sessionprofile",
+      "ref_lucide_react"
+    ],
+    "8": [
+      "app_quizzes_quizid_actions",
+      "app_quizzes_quizid_actions_readanswers",
+      "app_quizzes_quizid_actions_submitquiz",
+      "app_quizzes_quizid_actions_submitstate",
+      "app_quizzes_quizid_page",
+      "app_quizzes_quizid_page_formatwhen",
+      "app_quizzes_quizid_page_takequizpage",
+      "app_quizzes_quizid_take_form",
+      "app_quizzes_quizid_take_form_initialstate",
+      "app_quizzes_quizid_take_form_question",
+      "app_quizzes_quizid_take_form_takequizform",
+      "app_quizzes_quizid_take_form_takequizform_setsingle",
+      "app_quizzes_quizid_take_form_takequizform_togglemulti"
+    ],
+    "9": [
+      "app_admin_classes_actions",
+      "app_admin_classes_actions_addclass",
+      "app_admin_classes_actions_catalogstate",
+      "app_admin_classes_actions_removeclass",
+      "app_admin_classes_actions_requireadmin",
+      "app_admin_classes_add_form",
+      "app_admin_classes_add_form_addclassform",
+      "app_admin_classes_add_form_initialstate",
+      "app_admin_classes_add_form_removeclassform",
+      "app_admin_classes_page",
+      "app_admin_classes_page_classespage",
+      "app_admin_classes_page_classrow"
+    ],
+    "10": [
+      "app_admin_courses_actions",
+      "app_admin_courses_actions_addcourse",
+      "app_admin_courses_actions_catalogstate",
+      "app_admin_courses_actions_removecourse",
+      "app_admin_courses_actions_requireadmin",
+      "app_admin_courses_add_form",
+      "app_admin_courses_add_form_addcourseform",
+      "app_admin_courses_add_form_initialstate",
+      "app_admin_courses_add_form_removecourseform",
+      "app_admin_courses_page",
+      "app_admin_courses_page_courserow",
+      "app_admin_courses_page_coursespage"
+    ],
+    "11": [
+      "app_login_actions",
+      "app_login_actions_login",
+      "app_login_actions_loginstate",
+      "app_login_login_form",
+      "app_login_login_form_initialstate",
+      "app_login_login_form_loginform",
+      "app_login_page",
+      "app_login_page_loginpage"
+    ],
+    "12": [
+      "app_signup_actions",
+      "app_signup_actions_signup",
+      "app_signup_actions_signupstate",
+      "app_signup_page",
+      "app_signup_page_signuppage",
+      "app_signup_signup_form",
+      "app_signup_signup_form_initialstate",
+      "app_signup_signup_form_signupform"
+    ],
+    "13": [
+      "package_dependencies",
+      "package_dependencies_exceljs",
+      "package_dependencies_lucide_react",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_supabase_ssr",
+      "package_dependencies_supabase_supabase_js"
+    ],
+    "14": [
+      "postcss_config",
+      "postcss_config_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.11951219512195121,
+    "1": 0.0625,
+    "2": 0.1532258064516129,
+    "3": 0.1695906432748538,
+    "4": 0.10526315789473684,
+    "5": 0.16993464052287582,
+    "6": 0.3076923076923077,
+    "7": 0.20512820512820512,
+    "8": 0.24358974358974358,
+    "9": 0.3333333333333333,
+    "10": 0.3333333333333333,
+    "11": 0.42857142857142855,
+    "12": 0.42857142857142855,
+    "13": 0.25,
+    "14": 1.0
+  },
+  "gods": [
+    {
+      "id": "lib_supabase_server_createclient",
+      "label": "createClient()",
+      "degree": 53
+    },
+    {
+      "id": "ref_next",
+      "label": "next",
+      "degree": 32
+    },
+    {
+      "id": "lib_session_getsessionprofile",
+      "label": "getSessionProfile()",
+      "degree": 26
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 13
+    },
+    {
+      "id": "app_admin_quizzes_quizid_actions_savequestion",
+      "label": "saveQuestion()",
+      "degree": 8
+    },
+    {
+      "id": "app_admin_quizzes_quizid_actions_requireadmin",
+      "label": "requireAdmin()",
+      "degree": 7
+    },
+    {
+      "id": "app_admin_quizzes_quizid_question_form_questionform",
+      "label": "QuestionForm()",
+      "degree": 7
+    },
+    {
+      "id": "app_admin_quizzes_quizid_actions_importquestions",
+      "label": "importQuestions()",
+      "degree": 6
+    },
+    {
+      "id": "app_admin_quizzes_quizid_actions_quizpath",
+      "label": "quizPath()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "requireAdmin()",
+      "target": "createClient()",
+      "source_files": [
+        "app/admin/quizzes/[quizId]/actions.ts",
+        "lib/supabase/server.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "QuizEditorPage()",
+      "target": "createClient()",
+      "source_files": [
+        "app/admin/quizzes/[quizId]/page.tsx",
+        "lib/supabase/server.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "logOut()",
+      "target": "createClient()",
+      "source_files": [
+        "app/auth/logout.ts",
+        "lib/supabase/server.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "logIn()",
+      "target": "createClient()",
+      "source_files": [
+        "app/login/actions.ts",
+        "lib/supabase/server.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "LoginPage()",
+      "target": "getSessionProfile()",
+      "source_files": [
+        "app/login/page.tsx",
+        "lib/session.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

@@ -1,34 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DirmanQuiz
 
-## Getting Started
+Practice quizzes and course materials. Built with Next.js and Supabase.
 
-First, run the development server:
+Product rules are in [docs/PRD.md](docs/PRD.md). The technical design is in [docs/Architecture.md](docs/Architecture.md).
+
+## Requirements
+
+- Node.js 20 or newer, or Docker Desktop
+- A free Supabase project
+
+## 1. Create the Supabase project
+
+1. Sign in at [supabase.com](https://supabase.com) and create a new project.
+2. Open **Project Settings > API** and keep the page open. You need the Project URL and the `anon` public key.
+
+## 2. Set environment variables
+
+Copy the example file:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+On Windows PowerShell:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+Copy-Item .env.example .env.local
+```
 
-## Learn More
+Fill in `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Where to find it |
+| --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | Project Settings > API > Project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Project Settings > API > `anon` `public` key |
+| `SUPABASE_SERVICE_ROLE_KEY` | Project Settings > API > `service_role` key. Optional. Never put it in client code |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3. Create the database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open **SQL Editor** in the Supabase dashboard. Paste and run each file in this order:
 
-## Deploy on Vercel
+1. `supabase/migrations/001_schema.sql`
+2. `supabase/migrations/002_auth_triggers.sql`
+3. `supabase/migrations/003_rls.sql`
+4. `supabase/migrations/004_functions.sql`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Each file should finish with "Success. No rows returned".
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 4. Seed the first admin email
+
+Open `supabase/seed.sql`, replace `admin@example.com` with your own email, then run it in the SQL Editor. Only emails on this list can sign up.
+
+## 5. Email confirmation
+
+Supabase asks new users to confirm their email by default. Choose one:
+
+- **Simplest for a class:** Authentication > Sign In / Providers > Email, turn off **Confirm email**. People can log in right after sign-up.
+- **Keep confirmation on:** people must click the link in the confirmation email before logging in. Set **Authentication > URL Configuration > Site URL** to the address where the app runs, for example `http://localhost:3000`.
+
+## 6. Run the app
+
+With Node.js installed:
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000), choose **Sign up**, and register with the admin email from step 4. Then open **Roster** to add your students' emails.
+
+To run in Docker instead, skip the Node.js commands and use the next section. Steps 2–5 stay the same.
+
+## Run with Docker
+
+[Docker Desktop](https://www.docker.com/products/docker-desktop/) must be running. Fill in `.env.local` first. Run the SQL files in the Supabase SQL Editor (steps 3–5). The container starts the Next.js app only.
+
+Development server, with reload when you save files:
+
+```powershell
+docker compose up --build
+```
+
+Open [http://localhost:3000](http://localhost:3000). Later starts can omit `--build` until `package.json` changes. After a dependency change, replace the stored Linux `node_modules` volume:
+
+```powershell
+docker compose down -v
+docker compose up --build
+```
+
+Stop the dev server with Ctrl+C, then `docker compose down`.
+
+Production-like run. Name the `prod` service so only that container binds port 3000. `--env-file` supplies the public Supabase values at image build time:
+
+```powershell
+docker compose --env-file .env.local --profile prod up --build prod
+```
+
+Stop it with Ctrl+C, then `docker compose --profile prod down`.
+
+## Using the app
+
+- **Roster** (admin): add or remove the emails that may sign up, and set each email's role.
+- **Quiz builder** (admin): create quizzes, add single-answer or multi-select questions, then publish.
+- **Materials** (admin): add Google Drive links. Make each Drive file shareable with "Anyone with the link" or with your class.
+- **Quizzes** (everyone): take a quiz as many times as you like. The score and correct answers appear after submit.
+- **Leaderboard**: each quiz has its own board, ranked by best score, then by the earlier submit time.
+
+## Scripts
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Local development server |
+| `npm run build` | Production build |
+| `npm run start` | Run the production build |
+| `npm run lint` | ESLint |
