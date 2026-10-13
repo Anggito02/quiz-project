@@ -1,37 +1,37 @@
 {
   "app/admin/classes/actions.ts": {
-    "mtime": 1791859591.792372,
-    "seen": 1791862494.9571702,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2612293,
     "ast_hash": "63dbde38cf02ff4991bcde60c63ea779",
     "semantic_hash": ""
   },
   "app/admin/classes/add-form.tsx": {
-    "mtime": 1791859591.824372,
-    "seen": 1791862494.9571702,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2612293,
     "ast_hash": "188941631544569959086241bf96266e",
     "semantic_hash": ""
   },
   "app/admin/classes/page.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.9571702,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2612293,
     "ast_hash": "ae64fda1ab4ec7f5e6b932ce220d555e",
     "semantic_hash": ""
   },
   "app/admin/courses/actions.ts": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.9571702,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.26223,
     "ast_hash": "0f400def3e8e34a03c6c1b3b1adca02b",
     "semantic_hash": ""
   },
   "app/admin/courses/add-form.tsx": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.9571702,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.26223,
     "ast_hash": "c8e247b87d04c9b6eeb57d8af64a8d0c",
     "semantic_hash": ""
   },
   "app/admin/courses/page.tsx": {
-    "mtime": 1791859591.792372,
-    "seen": 1791862494.9571702,
+    "mtime": 1791871725.1783853,
+    "seen": 1791876160.26223,
     "ast_hash": "b93d353254dcd01d49174528e740aab5",
     "semantic_hash": ""
   },
@@ -42,62 +42,62 @@
     "semantic_hash": "22a6c88c9f42185170e1204b27a18222"
   },
   "app/admin/quizzes/[quizId]/actions.ts": {
-    "mtime": 1791859591.792372,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2684984,
     "ast_hash": "eec69c53407ad0f719e42a4b56cf2f43",
     "semantic_hash": ""
   },
   "app/admin/quizzes/[quizId]/import-form.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2684984,
     "ast_hash": "621eccd6a914ca8a7eccadf8a20e0c72",
     "semantic_hash": ""
   },
   "app/admin/quizzes/[quizId]/page.tsx": {
-    "mtime": 1791859591.7473922,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.2684984,
     "ast_hash": "6d35e8c6dbe2470dd8057c9848a65abd",
     "semantic_hash": ""
   },
   "app/admin/quizzes/[quizId]/question-form.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2684984,
     "ast_hash": "62c56680e247ff0b6db000368e7d4535",
     "semantic_hash": ""
   },
   "app/admin/quizzes/[quizId]/quiz-settings-form.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2684984,
     "ast_hash": "8b3bfb3ccd7c571a5709be9b7a40e3c7",
     "semantic_hash": ""
   },
   "app/admin/quizzes/actions.ts": {
-    "mtime": 1791859591.8073764,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2684984,
     "ast_hash": "e8a026168459191755e09208cf7a3b48",
     "semantic_hash": ""
   },
   "app/admin/quizzes/create-form.tsx": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2684984,
     "ast_hash": "bcfde7c0e4e0447aded1994d3009feeb",
     "semantic_hash": ""
   },
   "app/admin/quizzes/page.tsx": {
-    "mtime": 1791859591.792372,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2684984,
     "ast_hash": "dfca27e67b5044cbbd4924905b58543d",
     "semantic_hash": ""
   },
   "app/admin/quizzes/template/route.ts": {
-    "mtime": 1791859591.7973707,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2684984,
     "ast_hash": "cf897435ed4eff1c64205edbfafa7f74",
     "semantic_hash": ""
   },
   "app/admin/roster/actions.ts": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.960174,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2684984,
     "ast_hash": "e37c35b14329c89e3ba62edac89ba65e",
     "semantic_hash": "e37c35b14329c89e3ba62edac89ba65e"
   },
@@ -108,8 +108,8 @@
     "semantic_hash": "331f81b802ce842e2b0cbd2690c5f59b"
   },
   "app/admin/roster/page.tsx": {
-    "mtime": 1791859591.7363677,
-    "seen": 1791862494.9611716,
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.270491,
     "ast_hash": "67eda633b1574aa6b23d1d8abf198d39",
     "semantic_hash": "67eda633b1574aa6b23d1d8abf198d39"
   },
@@ -120,8 +120,8 @@
     "semantic_hash": "bdbbf9d5f005cdf8659301a8eda1eba5"
   },
   "app/layout.tsx": {
-    "mtime": 1791862426.8854327,
-    "seen": 1791862494.9621696,
+    "mtime": 1791871725.1763704,
+    "seen": 1791876160.27149,
     "ast_hash": "d272100b4fcc6ac1d28ea73afd16af8f",
     "semantic_hash": ""
   },
@@ -138,21 +138,21 @@
     "semantic_hash": "da86b043c2cce5ff0f7699cb8d6f556c"
   },
   "app/login/page.tsx": {
-    "mtime": 1791785943.4249783,
-    "seen": 1791791190.526347,
-    "ast_hash": "c2501c6bc5d3857939f86d21d9ff5f0b",
+    "mtime": 1791862559.5034876,
+    "seen": 1791876160.2740114,
+    "ast_hash": "9aa7a9060432118bc57bb51b7f3c9aa0",
     "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1791859591.7583785,
-    "seen": 1791862494.9631722,
-    "ast_hash": "c63c7139deeaa7c48dd51bcd27b0a88c",
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.2740114,
+    "ast_hash": "3e08ddbaa301117b08df19b85e8b841e",
     "semantic_hash": ""
   },
   "app/quizzes/page.tsx": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.9631722,
-    "ast_hash": "d260e7a2e33601dd0c10f9ced5617493",
+    "mtime": 1791876042.5579329,
+    "seen": 1791876160.2740114,
+    "ast_hash": "90fdfdeddcf15d5457baa963c944d494",
     "semantic_hash": ""
   },
   "app/signup/actions.ts": {
@@ -162,9 +162,9 @@
     "semantic_hash": "9e830b7b112f270bfefa5d39b08ec6cb"
   },
   "app/signup/page.tsx": {
-    "mtime": 1791859591.7473922,
-    "seen": 1791862494.9641726,
-    "ast_hash": "a5e14c2e8e58152a0c7a4c65f70aa404",
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.2760108,
+    "ast_hash": "fc407ca607101bc302715cbb89a1c936",
     "semantic_hash": ""
   },
   "app/signup/signup-form.tsx": {
@@ -174,9 +174,9 @@
     "semantic_hash": "ca06b12b614edebc4dda959e3ba39b19"
   },
   "components/site-nav.tsx": {
-    "mtime": 1791862467.9037213,
-    "seen": 1791862494.96617,
-    "ast_hash": "fca429b8e2cd4995942a20fb5bfa1a01",
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.2818358,
+    "ast_hash": "8f291c1c65a2282b7e452d4ccf076b77",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
@@ -192,14 +192,14 @@
     "semantic_hash": "359f49d489f9da8dfd2538ff8990748e"
   },
   "lib/quiz-excel.ts": {
-    "mtime": 1791859591.8073764,
-    "seen": 1791862494.9681714,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2843714,
     "ast_hash": "d53877e04e69c3c4585ed3a738db2b74",
     "semantic_hash": ""
   },
   "lib/quiz-validation.ts": {
-    "mtime": 1791859591.7913647,
-    "seen": 1791862494.9681714,
+    "mtime": 1791871725.1763704,
+    "seen": 1791876160.2843714,
     "ast_hash": "de904938bb85463bb0913ff266fa4188",
     "semantic_hash": ""
   },
@@ -222,8 +222,8 @@
     "semantic_hash": "e678b3e14254ade9707dfbd190e67f17"
   },
   "next.config.ts": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.970169,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2893772,
     "ast_hash": "db6a03e5424b604d831f43123d16b855",
     "semantic_hash": ""
   },
@@ -258,68 +258,68 @@
     "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
   },
   "app/quizzes/[quizId]/actions.ts": {
-    "mtime": 1791859591.7473922,
-    "seen": 1791862494.9631722,
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.2740114,
     "ast_hash": "5f73edc17323f90165e3e78b1332d08e",
     "semantic_hash": ""
   },
   "app/quizzes/[quizId]/attempts/[attemptId]/page.tsx": {
-    "mtime": 1791859591.7973707,
-    "seen": 1791862494.9631722,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2740114,
     "ast_hash": "745e07e38213b79355668a7b2fb29d47",
     "semantic_hash": ""
   },
   "app/quizzes/[quizId]/leaderboard/page.tsx": {
-    "mtime": 1791859591.7633786,
-    "seen": 1791862494.9631722,
+    "mtime": 1791871725.1763704,
+    "seen": 1791876160.2740114,
     "ast_hash": "9276e0b02deb4b0441ffaee6e10eb205",
     "semantic_hash": ""
   },
   "app/quizzes/[quizId]/page.tsx": {
-    "mtime": 1791859591.8073764,
-    "seen": 1791862494.9631722,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2740114,
     "ast_hash": "d6459f2d5577504cd502d0a77f35ba75",
     "semantic_hash": ""
   },
   "app/quizzes/[quizId]/take-form.tsx": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.9631722,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2740114,
     "ast_hash": "d4a8163444297d357d7fc5bd681bf2c7",
     "semantic_hash": ""
   },
   "app/unlimited/[sessionId]/page.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2780144,
     "ast_hash": "352ee66e5b6be5469b1d66e1d1b73391",
     "semantic_hash": ""
   },
   "app/unlimited/[sessionId]/play-form.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2780144,
     "ast_hash": "cf40f189c19862cc906a62327527c694",
     "semantic_hash": ""
   },
   "app/unlimited/actions.ts": {
-    "mtime": 1791859591.792372,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.1930614,
+    "seen": 1791876160.2780144,
     "ast_hash": "ccb416a7d72a687e027bef24f6255d77",
     "semantic_hash": ""
   },
   "app/unlimited/leaderboard/page.tsx": {
-    "mtime": 1791859591.8093686,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.2028213,
+    "seen": 1791876160.2780144,
     "ast_hash": "2659516056f165f87ab8ab4aebf204ca",
     "semantic_hash": ""
   },
   "app/unlimited/page.tsx": {
-    "mtime": 1791859591.8073764,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.2780144,
     "ast_hash": "4d04f0dc9249f40f92f5b94651e62eac",
     "semantic_hash": ""
   },
   "app/unlimited/setup-form.tsx": {
-    "mtime": 1791859591.7633786,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.1763704,
+    "seen": 1791876160.2780144,
     "ast_hash": "605a7a32bade140fdfd8f846735c4bff",
     "semantic_hash": ""
   },
@@ -330,8 +330,8 @@
     "semantic_hash": ""
   },
   "app/admin/leaderboard/page.tsx": {
-    "mtime": 1791859591.7633786,
-    "seen": 1791862494.9591727,
+    "mtime": 1791871725.1763704,
+    "seen": 1791876160.2664967,
     "ast_hash": "badda66387874d9bb1cfece1e5ca83ad",
     "semantic_hash": ""
   },
@@ -342,8 +342,8 @@
     "semantic_hash": ""
   },
   "app/leaderboard/page.tsx": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.9621696,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.27149,
     "ast_hash": "80223614781a6ee2fdb1d17d9d2e1f60",
     "semantic_hash": ""
   },
@@ -354,26 +354,26 @@
     "semantic_hash": ""
   },
   "components/kuis-mark.tsx": {
-    "mtime": 1791862393.3907404,
-    "seen": 1791862494.965172,
-    "ast_hash": "874825d32351ccc9488fd961917f31b8",
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.280012,
+    "ast_hash": "b24b9d16a7a91dcd4ee397d50bce728a",
     "semantic_hash": ""
   },
   "components/leaderboard-table.tsx": {
-    "mtime": 1791859591.824372,
-    "seen": 1791862494.965172,
+    "mtime": 1791871725.202455,
+    "seen": 1791876160.280012,
     "ast_hash": "1b334ddb081bb8c779eab5ee14a59a30",
     "semantic_hash": ""
   },
   "components/leaderboard-view.tsx": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.965172,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.280012,
     "ast_hash": "0d214aa680a284e157e7f638f373a590",
     "semantic_hash": ""
   },
   "components/learner-shell.tsx": {
-    "mtime": 1791862426.0255456,
-    "seen": 1791862494.965172,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.280012,
     "ast_hash": "bbed02581a424a8d0f04900a1c0bba71",
     "semantic_hash": ""
   },
@@ -384,14 +384,14 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.975184,
+    "mtime": 1791871902.4773624,
+    "seen": 1791876160.298419,
     "ast_hash": "0ba4435e99c8c019826701bc1d4a997a",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1791859591.806361,
-    "seen": 1791862494.975184,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.298419,
     "ast_hash": "2f1994a27eb509b85c2a524e89db9e23",
     "semantic_hash": ""
   },
@@ -419,72 +419,6 @@
     "ast_hash": "1f52df79dec0f98cce505b06f326c08a",
     "semantic_hash": ""
   },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_01_e8e35002.md": {
-    "mtime": 1791791174.317522,
-    "seen": 1791791190.5294724,
-    "ast_hash": "0198f041f0a92794bc8d7ef6cdcffe96",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_02_8eeaad2a.md": {
-    "mtime": 1791791174.3989923,
-    "seen": 1791791190.5294724,
-    "ast_hash": "c3508f6b492f4866e165e1ce5600009a",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_03_7535e6a2.md": {
-    "mtime": 1791791174.4816854,
-    "seen": 1791791190.5294724,
-    "ast_hash": "49fd14b6839212efd86ea1468a60fa93",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_04_ac350146.md": {
-    "mtime": 1791791174.5588412,
-    "seen": 1791791190.5294724,
-    "ast_hash": "e8cd3ea3382c93b073706eb3abf04d04",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_05_2df92f33.md": {
-    "mtime": 1791791174.6332293,
-    "seen": 1791791190.5294724,
-    "ast_hash": "5e6e8156cb309fecd2cafaed73fe2d4c",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_06_b2d0caf3.md": {
-    "mtime": 1791791174.707036,
-    "seen": 1791791190.5294724,
-    "ast_hash": "6e7496825c30be2d4238b2c4df1c68e1",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_07_6429e3e4.md": {
-    "mtime": 1791791174.7812042,
-    "seen": 1791791190.5294724,
-    "ast_hash": "cd3d9472bf0d4e568ac743f3c010f509",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_08_292c38f1.md": {
-    "mtime": 1791791174.8591506,
-    "seen": 1791791190.5294724,
-    "ast_hash": "9ae0f49a4f1f3ba3463bf35c818e01ba",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_09_fcaf5889.md": {
-    "mtime": 1791791174.9617846,
-    "seen": 1791791190.5294724,
-    "ast_hash": "6c149be21507c8e9d4f557057eb9bbe4",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_10_f32890a6.md": {
-    "mtime": 1791791175.0539007,
-    "seen": 1791791190.5294724,
-    "ast_hash": "d519e8bee727ac871f25d65d8f5849d6",
-    "semantic_hash": ""
-  },
-  "graphify-out/converted/dirmanquiz-questions_mk2_w2_d20da342.md": {
-    "mtime": 1791791174.2194114,
-    "seen": 1791791190.5294724,
-    "ast_hash": "885df2db0e7c2c328894d8c8191fec3f",
-    "semantic_hash": ""
-  },
   "graphify-out/converted/dirmanquiz-questions_template_1117ac3d.md": {
     "mtime": 1791617224.3965354,
     "seen": 1791791190.5294724,
@@ -498,14 +432,14 @@
     "semantic_hash": ""
   },
   "components/quiz-board-select.tsx": {
-    "mtime": 1791859591.8083873,
-    "seen": 1791862494.965172,
+    "mtime": 1791871725.1940596,
+    "seen": 1791876160.280012,
     "ast_hash": "bee6e26843afe151a4aadcec6c8bd97d",
     "semantic_hash": ""
   },
   "components/ambient-backdrop.tsx": {
-    "mtime": 1791862388.2097006,
-    "seen": 1791862494.9641726,
+    "mtime": 1791871725.1749208,
+    "seen": 1791876160.2780144,
     "ast_hash": "7d052baf5e8d7872b7bb4e639527a61b",
     "semantic_hash": ""
   },
@@ -570,15 +504,129 @@
     "semantic_hash": ""
   },
   "public/DirmanQuiz-Logo-Kit/SVG/dirmanquiz-logo-dark.svg": {
-    "mtime": 1791861669.9313347,
-    "seen": 1791862494.9891891,
-    "ast_hash": "11d5d1831cd2806f4ec2e99317ddb60f",
+    "mtime": 1791871725.2028213,
+    "seen": 1791876160.3221014,
+    "ast_hash": "721390bb14ddcacd395a1d58422ba41d",
     "semantic_hash": ""
   },
   "public/DirmanQuiz-Logo-Kit/SVG/dirmanquiz-logo-light.svg": {
-    "mtime": 1791861669.9495678,
-    "seen": 1791862494.9891891,
-    "ast_hash": "58a64fe461f6f4bef2a911206dce8a25",
+    "mtime": 1791871725.1763704,
+    "seen": 1791876160.3221014,
+    "ast_hash": "b18c7f51705994bd5902f70d53fb42d8",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_01_f2e6933a.md": {
+    "mtime": 1791876133.5500567,
+    "seen": 1791876160.3039432,
+    "ast_hash": "0198f041f0a92794bc8d7ef6cdcffe96",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_02_03a0f4c0.md": {
+    "mtime": 1791876133.61597,
+    "seen": 1791876160.3039432,
+    "ast_hash": "c3508f6b492f4866e165e1ce5600009a",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_03_f6a7d5e5.md": {
+    "mtime": 1791876133.6587975,
+    "seen": 1791876160.3039432,
+    "ast_hash": "49fd14b6839212efd86ea1468a60fa93",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_04_7a637b31.md": {
+    "mtime": 1791876133.696616,
+    "seen": 1791876160.3039432,
+    "ast_hash": "e8cd3ea3382c93b073706eb3abf04d04",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_05_38906f44.md": {
+    "mtime": 1791876133.7396693,
+    "seen": 1791876160.3039432,
+    "ast_hash": "5e6e8156cb309fecd2cafaed73fe2d4c",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_06_a8ae08d4.md": {
+    "mtime": 1791876133.7877085,
+    "seen": 1791876160.3039432,
+    "ast_hash": "6e7496825c30be2d4238b2c4df1c68e1",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_07_9d81df26.md": {
+    "mtime": 1791876133.82932,
+    "seen": 1791876160.3039432,
+    "ast_hash": "cd3d9472bf0d4e568ac743f3c010f509",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_08_628225a4.md": {
+    "mtime": 1791876133.877759,
+    "seen": 1791876160.3039432,
+    "ast_hash": "9ae0f49a4f1f3ba3463bf35c818e01ba",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_09_02cd9bf2.md": {
+    "mtime": 1791876133.9215264,
+    "seen": 1791876160.3039432,
+    "ast_hash": "6c149be21507c8e9d4f557057eb9bbe4",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_10_b0744892.md": {
+    "mtime": 1791876133.9734287,
+    "seen": 1791876160.3039432,
+    "ast_hash": "d519e8bee727ac871f25d65d8f5849d6",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w2_3d7556a0.md": {
+    "mtime": 1791876133.4979293,
+    "seen": 1791876160.3039432,
+    "ast_hash": "885df2db0e7c2c328894d8c8191fec3f",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w3_1_7f856264.md": {
+    "mtime": 1791876136.6724997,
+    "seen": 1791876160.3039432,
+    "ast_hash": "4212ff16e8eb6ddaaa5786b0ea51e0b6",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w3_2_c23b7651.md": {
+    "mtime": 1791876136.7454996,
+    "seen": 1791876160.3039432,
+    "ast_hash": "b4573989e5a159862594f87d32a56a51",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w3_3_62b74ddd.md": {
+    "mtime": 1791876136.8161902,
+    "seen": 1791876160.3039432,
+    "ast_hash": "a6452cf080f77dbbecabde46562eacc0",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_mk2_w4_2ef22eff.md": {
+    "mtime": 1791876138.084727,
+    "seen": 1791876160.3039432,
+    "ast_hash": "f7349c0beb3acc607d62d405f3c08fb3",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_template_5620beb7.md": {
+    "mtime": 1791876138.1741915,
+    "seen": 1791876160.3059611,
+    "ast_hash": "0dbc0e6e8c632c231e905c102f5c8075",
+    "semantic_hash": ""
+  },
+  "graphify-out/converted/dirmanquiz-questions_template_da5d8d59.md": {
+    "mtime": 1791876136.8617227,
+    "seen": 1791876160.3059611,
+    "ast_hash": "0dbc0e6e8c632c231e905c102f5c8075",
+    "semantic_hash": ""
+  },
+  "questions/mk2w3/Materi Week 3 - MK02.pdf": {
+    "mtime": 1789956742.1535892,
+    "seen": 1791876160.3079636,
+    "ast_hash": "686efd61744891e11e95f6a9ddfcaa03",
+    "semantic_hash": ""
+  },
+  "questions/mk2w4/[P3MD] Week 4 MK02.pdf": {
+    "mtime": 1790637322.1428342,
+    "seen": 1791876160.3079636,
+    "ast_hash": "a310af1376e2500c22adc31bd412c320",
     "semantic_hash": ""
   }
 }

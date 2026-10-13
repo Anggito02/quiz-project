@@ -11,7 +11,7 @@
         font-weight="900" font-size="76" fill="#FFFFFF" letter-spacing="-2">Dirman</text>
   <text x="175" y="123" font-family="BF,Liberation Sans,Arial,sans-serif"
         font-weight="900" font-size="76" fill="#B5FF4D" letter-spacing="-2"
-        dx="322">Quiz</text>
+        dx="257">Quiz</text>
   <text x="178" y="160" font-family="BF,Liberation Sans,Arial,sans-serif"
         font-weight="400" font-size="22" fill="rgba(255,255,255,0.4)"
         font-style="italic">Contekan yang halal.</text>
