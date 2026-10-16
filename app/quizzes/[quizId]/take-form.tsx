@@ -78,8 +78,8 @@ export function TakeQuizForm({ quizId, questions }: { quizId: string; questions:
               Next question
             </button>
           ) : (
-            <button className="btn btn-quiz" type="submit" disabled={pending}>
-              Submit quiz
+            <button className="btn btn-quiz" type="submit" disabled={pending} aria-busy={pending}>
+              {pending ? "Submitting…" : "Submit quiz"}
             </button>
           )}
         </div>

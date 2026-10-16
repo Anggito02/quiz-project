@@ -6,15 +6,14 @@
   "4": "═══════════════════════════════════════════════════════════════",
   "5": "Architecture: Financial Management and Strategy Quiz",
   "6": "Same structure as DARK. Change text colors only:",
-  "7": "play-form.tsx",
+  "7": "app/quizzes/page.tsx",
   "8": "Product Requirements: Financial Management and Strategy Quiz",
   "9": "compilerOptions",
   "10": "roster/actions.ts",
   "11": "quizzes/actions.ts",
-  "12": "COLOR TOKENS",
+  "12": "login/page.tsx",
   "13": "classes/add-form.tsx",
   "14": "courses/add-form.tsx",
-  "15": "app/quizzes/page.tsx",
   "16": "getSupabaseEnv",
   "17": "dirmanquiz-questions_mk2_w2_01_f2e6933a.md",
   "18": "dirmanquiz-questions_mk2_w2_02_03a0f4c0.md",
@@ -36,5 +35,6 @@
   "34": "dirmanquiz-questions_template_da5d8d59.md",
   "35": "postcss.config.mjs",
   "36": "AGENTS.md",
-  "37": "CLAUDE.md"
+  "37": "CLAUDE.md",
+  "38": "loading-frame.tsx"
 }

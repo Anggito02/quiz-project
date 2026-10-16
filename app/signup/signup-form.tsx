@@ -51,8 +51,8 @@ export function SignUpForm() {
       </div>
       {state.error ? <p className="error-text">{state.error}</p> : null}
       {state.notice ? <p className="notice">{state.notice}</p> : null}
-      <button className="btn btn-primary" type="submit" disabled={pending}>
-        Sign up
+      <button className="btn btn-primary" type="submit" disabled={pending} aria-busy={pending}>
+        {pending ? "Signing up…" : "Sign up"}
       </button>
     </form>
   );

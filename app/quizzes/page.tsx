@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PendingLink } from "@/components/pending-link";
 import { Fragment } from "react";
 import { redirect } from "next/navigation";
 import { getSessionProfile } from "@/lib/session";
@@ -52,7 +53,7 @@ function QuizCards({ quizzes }: { quizzes: QuizCard[] }) {
         <li className="resource-card" key={quiz.id}>
           <p className="tag">{quiz.courseName}</p>
           <h3>
-            <Link href={`/quizzes/${quiz.id}`}>{quiz.title}</Link>
+            <PendingLink href={`/quizzes/${quiz.id}`}>{quiz.title}</PendingLink>
           </h3>
           {quiz.description ? <p className="lede">{quiz.description}</p> : null}
           {quiz.attemptCount != null ? (
@@ -61,12 +62,12 @@ function QuizCards({ quizzes }: { quizzes: QuizCard[] }) {
             </p>
           ) : null}
           <p className="mt-2 flex flex-wrap gap-3">
-            <Link className="btn btn-quiz btn-sm" href={`/quizzes/${quiz.id}`}>
+            <PendingLink className="btn btn-quiz btn-sm" href={`/quizzes/${quiz.id}`}>
               Start quiz
-            </Link>
-            <Link className="btn btn-ghost btn-sm" href={`/leaderboard?quiz=${quiz.id}`}>
+            </PendingLink>
+            <PendingLink className="btn btn-ghost btn-sm" href={`/leaderboard?quiz=${quiz.id}`}>
               Leaderboard
-            </Link>
+            </PendingLink>
           </p>
         </li>
       ))}

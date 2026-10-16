@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { PendingLink } from "./pending-link";
 import { LeaderboardTable, type LeaderboardEntry } from "./leaderboard-table";
 import { TrophyBadge } from "./trophy";
 
@@ -33,9 +33,9 @@ export function ResultView({
       <div className="board-stack">
         <p className="flex flex-wrap gap-3">
           {actions.map((action) => (
-            <Link className="btn btn-ghost" href={action.href} key={action.href}>
+            <PendingLink className="btn btn-ghost" href={action.href} key={action.href}>
               {action.label}
-            </Link>
+            </PendingLink>
           ))}
         </p>
         <section className="board-panel">

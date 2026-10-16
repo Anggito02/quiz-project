@@ -29,8 +29,8 @@ export function UnlimitedSetupForm({ courses }: { courses: { id: string; name: s
         ))}
       </fieldset>
       {state.error ? <p className="error-text">{state.error}</p> : null}
-      <button className="btn btn-quiz justify-self-start" type="submit" disabled={pending}>
-        Start
+      <button className="btn btn-quiz justify-self-start" type="submit" disabled={pending} aria-busy={pending}>
+        {pending ? "Starting…" : "Start"}
       </button>
     </form>
   );

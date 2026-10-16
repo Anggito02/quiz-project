@@ -33,6 +33,19 @@
       "source_location": "L7"
     },
     {
+      "id": "app_unlimited_actions_unlimitedstate",
+      "label": "UnlimitedState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "createClient",
+      "file_type": "code",
+      "norm_label": "unlimitedstate",
+      "source_file": "app/unlimited/actions.ts",
+      "source_location": "L7"
+    },
+    {
       "id": "app_unlimited_leaderboard_page_boardrow",
       "label": "BoardRow",
       "_callable": true,
@@ -241,6 +254,19 @@
       "source_location": "L5"
     },
     {
+      "id": "app_login_actions_loginstate",
+      "label": "LoginState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "loginstate",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L6"
+    },
+    {
       "id": "app_admin_classes_actions_catalogstate",
       "label": "CatalogState",
       "_callable": true,
@@ -291,45 +317,6 @@
       "norm_label": "courserow",
       "source_file": "app/admin/courses/page.tsx",
       "source_location": "L4"
-    },
-    {
-      "id": "app_quizzes_page_courseembed",
-      "label": "CourseEmbed",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "courseembed",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "app_quizzes_page_quizcard",
-      "label": "QuizCard",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "quizcard",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L11"
-    },
-    {
-      "id": "app_quizzes_page_trendingrow",
-      "label": "TrendingRow",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "trendingrow",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L19"
     },
     {
       "id": "app_admin_quizzes_quizid_actions_editorstate",
@@ -410,17 +397,43 @@
       "source_location": "L1"
     },
     {
-      "id": "app_login_actions_loginstate",
-      "label": "LoginState",
+      "id": "app_quizzes_quizid_actions_submitstate",
+      "label": "SubmitState",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 3,
       "community_name": "site-nav.tsx",
       "file_type": "code",
-      "norm_label": "loginstate",
-      "source_file": "app/login/actions.ts",
-      "source_location": "L6"
+      "norm_label": "submitstate",
+      "source_file": "app/quizzes/[quizId]/actions.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_quizzes_quizid_take_form_question",
+      "label": "Question",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "question",
+      "source_file": "app/quizzes/[quizId]/take-form.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_unlimited_sessionid_play_form_question",
+      "label": "Question",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "question",
+      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
+      "source_location": "L9"
     },
     {
       "id": "lib_session_sessionprofile",
@@ -449,56 +462,43 @@
       "source_location": "L6"
     },
     {
-      "id": "app_quizzes_quizid_actions_submitstate",
-      "label": "SubmitState",
+      "id": "app_quizzes_page_courseembed",
+      "label": "CourseEmbed",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "submitstate",
-      "source_file": "app/quizzes/[quizId]/actions.ts",
-      "source_location": "L7"
+      "norm_label": "courseembed",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L10"
     },
     {
-      "id": "app_quizzes_quizid_take_form_question",
-      "label": "Question",
+      "id": "app_quizzes_page_quizcard",
+      "label": "QuizCard",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "question",
-      "source_file": "app/quizzes/[quizId]/take-form.tsx",
-      "source_location": "L8"
+      "norm_label": "quizcard",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L12"
     },
     {
-      "id": "app_unlimited_actions_unlimitedstate",
-      "label": "UnlimitedState",
+      "id": "app_quizzes_page_trendingrow",
+      "label": "TrendingRow",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "unlimitedstate",
-      "source_file": "app/unlimited/actions.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "app_unlimited_sessionid_play_form_question",
-      "label": "Question",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "question",
-      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
-      "source_location": "L9"
+      "norm_label": "trendingrow",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L20"
     },
     {
       "id": "app_admin_layout_adminlayout",
@@ -609,28 +609,16 @@
       "source_location": "L15"
     },
     {
-      "id": "app_quizzes_quizid_page_formatwhen",
-      "label": "formatWhen()",
+      "id": "app_unlimited_actions_startunlimited",
+      "label": "startUnlimited()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "createClient",
       "file_type": "code",
-      "norm_label": "formatwhen()",
-      "source_file": "app/quizzes/[quizId]/page.tsx",
-      "source_location": "L7"
-    },
-    {
-      "id": "app_quizzes_quizid_page_takequizpage",
-      "label": "TakeQuizPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "createClient",
-      "file_type": "code",
-      "norm_label": "takequizpage()",
-      "source_file": "app/quizzes/[quizId]/page.tsx",
-      "source_location": "L13"
+      "norm_label": "startunlimited()",
+      "source_file": "app/unlimited/actions.ts",
+      "source_location": "L26"
     },
     {
       "id": "app_unlimited_leaderboard_page_unlimitedleaderboardpage",
@@ -679,6 +667,18 @@
       "norm_label": "unlimitedsessionpage()",
       "source_file": "app/unlimited/[sessionId]/page.tsx",
       "source_location": "L23"
+    },
+    {
+      "id": "app_unlimited_setup_form_unlimitedsetupform",
+      "label": "UnlimitedSetupForm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "createClient",
+      "file_type": "code",
+      "norm_label": "unlimitedsetupform()",
+      "source_file": "app/unlimited/setup-form.tsx",
+      "source_location": "L8"
     },
     {
       "id": "components_leaderboard_table_formatwhen",
@@ -1101,6 +1101,42 @@
       "source_location": "L33"
     },
     {
+      "id": "app_login_actions_login",
+      "label": "logIn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "login()",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "app_login_login_form_loginform",
+      "label": "LoginForm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "loginform()",
+      "source_file": "app/login/login-form.tsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "app_login_page_loginpage",
+      "label": "LoginPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "loginpage()",
+      "source_file": "app/login/page.tsx",
+      "source_location": "L7"
+    },
+    {
       "id": "app_admin_classes_actions_addclass",
       "label": "addClass()",
       "_callable": true,
@@ -1243,66 +1279,6 @@
       "norm_label": "coursespage()",
       "source_file": "app/admin/courses/page.tsx",
       "source_location": "L9"
-    },
-    {
-      "id": "app_quizzes_page_cataloghref",
-      "label": "catalogHref()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "cataloghref()",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L32"
-    },
-    {
-      "id": "app_quizzes_page_coursenameof",
-      "label": "courseNameOf()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "coursenameof()",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L27"
-    },
-    {
-      "id": "app_quizzes_page_quizcards",
-      "label": "QuizCards()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "quizcards()",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L48"
-    },
-    {
-      "id": "app_quizzes_page_quizzespage",
-      "label": "QuizzesPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "quizzespage()",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L77"
-    },
-    {
-      "id": "app_quizzes_page_searchfilter",
-      "label": "searchFilter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "searchfilter()",
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L41"
     },
     {
       "id": "lib_env_getsupabaseenv",
@@ -1581,42 +1557,6 @@
       "source_location": "L29"
     },
     {
-      "id": "app_login_actions_login",
-      "label": "logIn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "login()",
-      "source_file": "app/login/actions.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_login_login_form_loginform",
-      "label": "LoginForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "loginform()",
-      "source_file": "app/login/login-form.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "app_login_page_loginpage",
-      "label": "LoginPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "loginpage()",
-      "source_file": "app/login/page.tsx",
-      "source_location": "L7"
-    },
-    {
       "id": "app_page_home",
       "label": "Home()",
       "_callable": true,
@@ -1629,6 +1569,90 @@
       "source_location": "L5"
     },
     {
+      "id": "app_quizzes_quizid_actions_readanswers",
+      "label": "readAnswers()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "readanswers()",
+      "source_file": "app/quizzes/[quizId]/actions.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "app_quizzes_quizid_actions_submitquiz",
+      "label": "submitQuiz()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "submitquiz()",
+      "source_file": "app/quizzes/[quizId]/actions.ts",
+      "source_location": "L26"
+    },
+    {
+      "id": "app_unlimited_actions_readanswers",
+      "label": "readAnswers()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "readanswers()",
+      "source_file": "app/unlimited/actions.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "app_unlimited_actions_submitunlimited",
+      "label": "submitUnlimited()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "submitunlimited()",
+      "source_file": "app/unlimited/actions.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "app_unlimited_sessionid_play_form_unlimitedplayform",
+      "label": "UnlimitedPlayForm()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "unlimitedplayform()",
+      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "app_unlimited_sessionid_play_form_unlimitedplayform_includecurrent",
+      "label": "includeCurrent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "includecurrent()",
+      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
+      "source_location": "L56"
+    },
+    {
+      "id": "app_unlimited_sessionid_play_form_unlimitedplayform_remember",
+      "label": "remember()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "remember()",
+      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
+      "source_location": "L86"
+    },
+    {
       "id": "components_ambient_backdrop_ambientbackdrop",
       "label": "AmbientBackdrop()",
       "_callable": true,
@@ -1639,6 +1663,18 @@
       "norm_label": "ambientbackdrop()",
       "source_file": "components/ambient-backdrop.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "components_answer_options_answeroptions",
+      "label": "AnswerOptions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "answeroptions()",
+      "source_file": "components/answer-options.tsx",
+      "source_location": "L12"
     },
     {
       "id": "components_kuis_mark_kuislettermark",
@@ -1698,7 +1734,7 @@
       "file_type": "code",
       "norm_label": "accountactions()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L61"
+      "source_location": "L62"
     },
     {
       "id": "components_site_nav_appchrome",
@@ -1710,7 +1746,7 @@
       "file_type": "code",
       "norm_label": "appchrome()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L260"
+      "source_location": "L265"
     },
     {
       "id": "components_site_nav_appchrome_togglecollapsed",
@@ -1722,7 +1758,7 @@
       "file_type": "code",
       "norm_label": "togglecollapsed()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L273"
+      "source_location": "L278"
     },
     {
       "id": "components_site_nav_footer",
@@ -1734,7 +1770,7 @@
       "file_type": "code",
       "norm_label": "footer()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L247"
+      "source_location": "L252"
     },
     {
       "id": "components_site_nav_learnerheader",
@@ -1746,7 +1782,7 @@
       "file_type": "code",
       "norm_label": "learnerheader()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L183"
+      "source_location": "L188"
     },
     {
       "id": "components_site_nav_learnerlinks",
@@ -1758,7 +1794,7 @@
       "file_type": "code",
       "norm_label": "learnerlinks()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L158"
+      "source_location": "L159"
     },
     {
       "id": "components_site_nav_navclass",
@@ -1770,7 +1806,7 @@
       "file_type": "code",
       "norm_label": "navclass()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L44"
+      "source_location": "L45"
     },
     {
       "id": "components_site_nav_pagetitle",
@@ -1782,7 +1818,7 @@
       "file_type": "code",
       "norm_label": "pagetitle()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "components_site_nav_readcollapsed",
@@ -1794,7 +1830,7 @@
       "file_type": "code",
       "norm_label": "readcollapsed()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L35"
+      "source_location": "L36"
     },
     {
       "id": "components_site_nav_sidebar",
@@ -1806,7 +1842,7 @@
       "file_type": "code",
       "norm_label": "sidebar()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L87"
+      "source_location": "L88"
     },
     {
       "id": "components_site_nav_subscribecollapsed",
@@ -1818,7 +1854,7 @@
       "file_type": "code",
       "norm_label": "subscribecollapsed()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L28"
+      "source_location": "L29"
     },
     {
       "id": "components_site_nav_writecollapsed",
@@ -1830,7 +1866,259 @@
       "file_type": "code",
       "norm_label": "writecollapsed()",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L39"
+      "source_location": "L40"
+    },
+    {
+      "id": "app_admin_leaderboard_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/admin/leaderboard/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_admin_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/admin/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_leaderboard_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/leaderboard/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_quizzes_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/quizzes/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_quizzes_quizid_attempts_attemptid_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_quizzes_quizid_leaderboard_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/quizzes/[quizId]/leaderboard/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_quizzes_quizid_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/quizzes/[quizId]/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_unlimited_leaderboard_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/unlimited/leaderboard/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_unlimited_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/unlimited/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_unlimited_sessionid_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/unlimited/[sessionId]/loading.tsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "components_loading_frame_adminloading",
+      "label": "AdminLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "adminloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L208"
+    },
+    {
+      "id": "components_loading_frame_boardpageloading",
+      "label": "BoardPageLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "boardpageloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L191"
+    },
+    {
+      "id": "components_loading_frame_bone",
+      "label": "Bone()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "bone()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_loading_frame_cardgrid",
+      "label": "CardGrid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "cardgrid()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "components_loading_frame_leaderboardloading",
+      "label": "LeaderboardLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "leaderboardloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L129"
+    },
+    {
+      "id": "components_loading_frame_loadingshell",
+      "label": "LoadingShell()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loadingshell()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "components_loading_frame_quizstartloading",
+      "label": "QuizStartLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "quizstartloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L80"
+    },
+    {
+      "id": "components_loading_frame_quizzesloading",
+      "label": "QuizzesLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "quizzesloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L59"
+    },
+    {
+      "id": "components_loading_frame_resultloading",
+      "label": "ResultLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "resultloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L102"
+    },
+    {
+      "id": "components_loading_frame_tablerows",
+      "label": "TableRows()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "tablerows()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "components_loading_frame_unlimitedloading",
+      "label": "UnlimitedLoading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "unlimitedloading()",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L163"
     },
     {
       "id": "app_signup_actions_signup",
@@ -1869,28 +2157,100 @@
       "source_location": "L8"
     },
     {
-      "id": "app_quizzes_quizid_actions_readanswers",
-      "label": "readAnswers()",
+      "id": "app_quizzes_page_cataloghref",
+      "label": "catalogHref()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "readanswers()",
-      "source_file": "app/quizzes/[quizId]/actions.ts",
-      "source_location": "L11"
+      "norm_label": "cataloghref()",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L33"
     },
     {
-      "id": "app_quizzes_quizid_actions_submitquiz",
-      "label": "submitQuiz()",
+      "id": "app_quizzes_page_coursenameof",
+      "label": "courseNameOf()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "submitquiz()",
-      "source_file": "app/quizzes/[quizId]/actions.ts",
-      "source_location": "L26"
+      "norm_label": "coursenameof()",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L28"
+    },
+    {
+      "id": "app_quizzes_page_quizcards",
+      "label": "QuizCards()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/quizzes/page.tsx",
+      "file_type": "code",
+      "norm_label": "quizcards()",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L49"
+    },
+    {
+      "id": "app_quizzes_page_quizzespage",
+      "label": "QuizzesPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/quizzes/page.tsx",
+      "file_type": "code",
+      "norm_label": "quizzespage()",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L78"
+    },
+    {
+      "id": "app_quizzes_page_searchfilter",
+      "label": "searchFilter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/quizzes/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchfilter()",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L42"
+    },
+    {
+      "id": "app_quizzes_quizid_page_countlabel",
+      "label": "countLabel()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/quizzes/page.tsx",
+      "file_type": "code",
+      "norm_label": "countlabel()",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L13"
+    },
+    {
+      "id": "app_quizzes_quizid_page_formatwhen",
+      "label": "formatWhen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/quizzes/page.tsx",
+      "file_type": "code",
+      "norm_label": "formatwhen()",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "app_quizzes_quizid_page_takequizpage",
+      "label": "TakeQuizPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "app/quizzes/page.tsx",
+      "file_type": "code",
+      "norm_label": "takequizpage()",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L17"
     },
     {
       "id": "app_quizzes_quizid_take_form_takequizform",
@@ -1898,7 +2258,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
       "norm_label": "takequizform()",
       "source_file": "app/quizzes/[quizId]/take-form.tsx",
@@ -1910,7 +2270,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
       "norm_label": "setsingle()",
       "source_file": "app/quizzes/[quizId]/take-form.tsx",
@@ -1922,107 +2282,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
       "norm_label": "togglemulti()",
       "source_file": "app/quizzes/[quizId]/take-form.tsx",
       "source_location": "L28"
     },
     {
-      "id": "app_unlimited_actions_readanswers",
-      "label": "readAnswers()",
+      "id": "components_pending_link_pendinglink",
+      "label": "PendingLink()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "readanswers()",
-      "source_file": "app/unlimited/actions.ts",
-      "source_location": "L11"
+      "norm_label": "pendinglink()",
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L25"
     },
     {
-      "id": "app_unlimited_actions_startunlimited",
-      "label": "startUnlimited()",
+      "id": "components_pending_link_pendingmark",
+      "label": "PendingMark()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "startunlimited()",
-      "source_file": "app/unlimited/actions.ts",
-      "source_location": "L26"
-    },
-    {
-      "id": "app_unlimited_actions_submitunlimited",
-      "label": "submitUnlimited()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "submitunlimited()",
-      "source_file": "app/unlimited/actions.ts",
-      "source_location": "L50"
-    },
-    {
-      "id": "app_unlimited_sessionid_play_form_unlimitedplayform",
-      "label": "UnlimitedPlayForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "unlimitedplayform()",
-      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
-      "source_location": "L18"
-    },
-    {
-      "id": "app_unlimited_sessionid_play_form_unlimitedplayform_includecurrent",
-      "label": "includeCurrent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "includecurrent()",
-      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
-      "source_location": "L56"
-    },
-    {
-      "id": "app_unlimited_sessionid_play_form_unlimitedplayform_remember",
-      "label": "remember()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "remember()",
-      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
-      "source_location": "L86"
-    },
-    {
-      "id": "app_unlimited_setup_form_unlimitedsetupform",
-      "label": "UnlimitedSetupForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "unlimitedsetupform()",
-      "source_file": "app/unlimited/setup-form.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "components_answer_options_answeroptions",
-      "label": "AnswerOptions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "answeroptions()",
-      "source_file": "components/answer-options.tsx",
-      "source_location": "L12"
+      "norm_label": "pendingmark()",
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L7"
     },
     {
       "id": "app_admin_layout",
@@ -2124,14 +2412,14 @@
       "source_location": "L1"
     },
     {
-      "id": "app_quizzes_quizid_page",
-      "label": "app/quizzes/[quizId]/page.tsx",
+      "id": "app_unlimited_actions",
+      "label": "unlimited/actions.ts",
       "_origin": "ast",
       "community": 0,
       "community_name": "createClient",
       "file_type": "code",
-      "norm_label": "app/quizzes/[quizid]/page.tsx",
-      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "norm_label": "unlimited/actions.ts",
+      "source_file": "app/unlimited/actions.ts",
       "source_location": "L1"
     },
     {
@@ -2166,6 +2454,28 @@
       "norm_label": "[sessionid]/page.tsx",
       "source_file": "app/unlimited/[sessionId]/page.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "app_unlimited_setup_form",
+      "label": "setup-form.tsx",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "createClient",
+      "file_type": "code",
+      "norm_label": "setup-form.tsx",
+      "source_file": "app/unlimited/setup-form.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_unlimited_setup_form_initialstate",
+      "label": "initialState",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "createClient",
+      "file_type": "code",
+      "norm_label": "initialstate",
+      "source_file": "app/unlimited/setup-form.tsx",
+      "source_location": "L6"
     },
     {
       "id": "components_leaderboard_table",
@@ -2861,160 +3171,48 @@
       "source_location": "L1"
     },
     {
-      "id": "docs_design_system_accent_kuis_lime",
-      "label": "Accent (Kuis Lime)",
+      "id": "app_login_actions",
+      "label": "login/actions.ts",
       "_origin": "ast",
       "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "accent (kuis lime)",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L48"
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "login/actions.ts",
+      "source_file": "app/login/actions.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_design_system_brand_kuis_indigo",
-      "label": "Brand (Kuis Indigo)",
+      "id": "app_login_login_form",
+      "label": "login-form.tsx",
       "_origin": "ast",
       "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "brand (kuis indigo)",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L37"
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "login-form.tsx",
+      "source_file": "app/login/login-form.tsx",
+      "source_location": "L1"
     },
     {
-      "id": "docs_design_system_color_tokens",
-      "label": "COLOR TOKENS",
+      "id": "app_login_login_form_initialstate",
+      "label": "initialState",
       "_origin": "ast",
       "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "color tokens",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L35"
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "initialstate",
+      "source_file": "app/login/login-form.tsx",
+      "source_location": "L6"
     },
     {
-      "id": "docs_design_system_dark_quiz_canvas_learner_mode",
-      "label": "Dark Quiz Canvas (Learner mode)",
+      "id": "app_login_page",
+      "label": "login/page.tsx",
       "_origin": "ast",
       "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "dark quiz canvas (learner mode)",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L52"
-    },
-    {
-      "id": "docs_design_system_every_screen_must_belong_to_exactly_one_mode_do_not_mix_visual_treatments",
-      "label": "Every screen must belong to exactly one mode. Do NOT mix visual treatments.",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "every screen must belong to exactly one mode. do not mix visual treatments.",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L15"
-    },
-    {
-      "id": "docs_design_system_mode_1_workspace",
-      "label": "MODE 1 \u2014 WORKSPACE",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mode 1 \u2014 workspace",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L17"
-    },
-    {
-      "id": "docs_design_system_mode_2_learner_live_quiz",
-      "label": "MODE 2 \u2014 LEARNER / LIVE QUIZ",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mode 2 \u2014 learner / live quiz",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "docs_design_system_mode_3_marketing_discovery",
-      "label": "MODE 3 \u2014 MARKETING / DISCOVERY",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "mode 3 \u2014 marketing / discovery",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L29"
-    },
-    {
-      "id": "docs_design_system_neutral_surfaces_workspace_mode",
-      "label": "Neutral Surfaces (Workspace mode)",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "neutral surfaces (workspace mode)",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L65"
-    },
-    {
-      "id": "docs_design_system_quiz_answer_palette_learner_mode_only",
-      "label": "Quiz Answer Palette (Learner mode only)",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "quiz answer palette (learner mode only)",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L83"
-    },
-    {
-      "id": "docs_design_system_secondary_kuis_purple",
-      "label": "Secondary (Kuis Purple)",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "secondary (kuis purple)",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L44"
-    },
-    {
-      "id": "docs_design_system_semantic",
-      "label": "Semantic",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "semantic",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L73"
-    },
-    {
-      "id": "docs_design_system_text",
-      "label": "Text",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "COLOR TOKENS",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "text",
-      "source_file": "docs/DESIGN_SYSTEM.md",
-      "source_location": "L59"
+      "community_name": "login/page.tsx",
+      "file_type": "code",
+      "norm_label": "login/page.tsx",
+      "source_file": "app/login/page.tsx",
+      "source_location": "L1"
     },
     {
       "id": "app_admin_classes_actions",
@@ -3102,17 +3300,6 @@
       "file_type": "code",
       "norm_label": "courses/page.tsx",
       "source_file": "app/admin/courses/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_quizzes_page",
-      "label": "app/quizzes/page.tsx",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "app/quizzes/page.tsx",
-      "file_type": "code",
-      "norm_label": "app/quizzes/page.tsx",
-      "source_file": "app/quizzes/page.tsx",
       "source_location": "L1"
     },
     {
@@ -3826,50 +4013,6 @@
       "source_location": "L13"
     },
     {
-      "id": "app_login_actions",
-      "label": "login/actions.ts",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "login/actions.ts",
-      "source_file": "app/login/actions.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_login_login_form",
-      "label": "login-form.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "login-form.tsx",
-      "source_file": "app/login/login-form.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_login_login_form_initialstate",
-      "label": "initialState",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "initialstate",
-      "source_file": "app/login/login-form.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "app_login_page",
-      "label": "login/page.tsx",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "site-nav.tsx",
-      "file_type": "code",
-      "norm_label": "login/page.tsx",
-      "source_file": "app/login/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_page",
       "label": "app/page.tsx",
       "_origin": "ast",
@@ -3881,6 +4024,61 @@
       "source_location": "L1"
     },
     {
+      "id": "app_quizzes_quizid_actions",
+      "label": "app/quizzes/[quizId]/actions.ts",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "app/quizzes/[quizid]/actions.ts",
+      "source_file": "app/quizzes/[quizId]/actions.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_quizzes_quizid_take_form",
+      "label": "take-form.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "take-form.tsx",
+      "source_file": "app/quizzes/[quizId]/take-form.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_quizzes_quizid_take_form_initialstate",
+      "label": "initialState",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "initialstate",
+      "source_file": "app/quizzes/[quizId]/take-form.tsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "app_unlimited_sessionid_play_form",
+      "label": "play-form.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "play-form.tsx",
+      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_unlimited_sessionid_play_form_initialstate",
+      "label": "initialState",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "initialstate",
+      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
+      "source_location": "L16"
+    },
+    {
       "id": "components_ambient_backdrop",
       "label": "ambient-backdrop.tsx",
       "_origin": "ast",
@@ -3889,6 +4087,28 @@
       "file_type": "code",
       "norm_label": "ambient-backdrop.tsx",
       "source_file": "components/ambient-backdrop.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_answer_options",
+      "label": "answer-options.tsx",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "answer-options.tsx",
+      "source_file": "components/answer-options.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_answer_options_tones",
+      "label": "TONES",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "site-nav.tsx",
+      "file_type": "code",
+      "norm_label": "tones",
+      "source_file": "components/answer-options.tsx",
       "source_location": "L1"
     },
     {
@@ -3933,7 +4153,7 @@
       "file_type": "code",
       "norm_label": "collapsedlisteners",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L26"
+      "source_location": "L27"
     },
     {
       "id": "ref_react",
@@ -4185,6 +4405,127 @@
       "source_location": "L1"
     },
     {
+      "id": "app_admin_leaderboard_loading",
+      "label": "admin/leaderboard/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "admin/leaderboard/loading.tsx",
+      "source_file": "app/admin/leaderboard/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_admin_loading",
+      "label": "admin/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "admin/loading.tsx",
+      "source_file": "app/admin/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_leaderboard_loading",
+      "label": "app/leaderboard/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "app/leaderboard/loading.tsx",
+      "source_file": "app/leaderboard/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_quizzes_loading",
+      "label": "quizzes/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "quizzes/loading.tsx",
+      "source_file": "app/quizzes/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_quizzes_quizid_attempts_attemptid_loading",
+      "label": "[attemptId]/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "[attemptid]/loading.tsx",
+      "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_quizzes_quizid_leaderboard_loading",
+      "label": "[quizId]/leaderboard/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "[quizid]/leaderboard/loading.tsx",
+      "source_file": "app/quizzes/[quizId]/leaderboard/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_quizzes_quizid_loading",
+      "label": "[quizId]/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "[quizid]/loading.tsx",
+      "source_file": "app/quizzes/[quizId]/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_unlimited_leaderboard_loading",
+      "label": "unlimited/leaderboard/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "unlimited/leaderboard/loading.tsx",
+      "source_file": "app/unlimited/leaderboard/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_unlimited_loading",
+      "label": "unlimited/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "unlimited/loading.tsx",
+      "source_file": "app/unlimited/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_unlimited_sessionid_loading",
+      "label": "[sessionId]/loading.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "[sessionid]/loading.tsx",
+      "source_file": "app/unlimited/[sessionId]/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_loading_frame",
+      "label": "loading-frame.tsx",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "loading-frame.tsx",
+      "file_type": "code",
+      "norm_label": "loading-frame.tsx",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "docs_architecture",
       "label": "Architecture.md",
       "_origin": "ast",
@@ -4245,6 +4586,18 @@
       "source_location": "L487"
     },
     {
+      "id": "docs_design_system_accent_kuis_lime",
+      "label": "Accent (Kuis Lime)",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "accent (kuis lime)",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L48"
+    },
+    {
       "id": "docs_design_system_always_pair_with_letter_markers_and_correct_incorrect_iconography",
       "label": "Always pair with letter markers AND correct/incorrect iconography.",
       "_origin": "ast",
@@ -4293,6 +4646,42 @@
       "source_location": "L486"
     },
     {
+      "id": "docs_design_system_brand_kuis_indigo",
+      "label": "Brand (Kuis Indigo)",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "brand (kuis indigo)",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "docs_design_system_color_tokens",
+      "label": "COLOR TOKENS",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "color tokens",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "docs_design_system_dark_quiz_canvas_learner_mode",
+      "label": "Dark Quiz Canvas (Learner mode)",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "dark quiz canvas (learner mode)",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L52"
+    },
+    {
       "id": "docs_design_system_end_of_kuis_design_system_prompt_v2",
       "label": "END OF KUIS DESIGN SYSTEM PROMPT  v2",
       "_origin": "ast",
@@ -4303,6 +4692,18 @@
       "norm_label": "end of kuis design system prompt  v2",
       "source_file": "docs/DESIGN_SYSTEM.md",
       "source_location": "L485"
+    },
+    {
+      "id": "docs_design_system_every_screen_must_belong_to_exactly_one_mode_do_not_mix_visual_treatments",
+      "label": "Every screen must belong to exactly one mode. Do NOT mix visual treatments.",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "every screen must belong to exactly one mode. do not mix visual treatments.",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L15"
     },
     {
       "id": "docs_design_system_full_lockup_dark_for_dark_quiz_backgrounds",
@@ -4363,6 +4764,102 @@
       "norm_label": "logo assets (inline svg \u2014 paste directly into html)",
       "source_file": "docs/DESIGN_SYSTEM.md",
       "source_location": "L93"
+    },
+    {
+      "id": "docs_design_system_mode_1_workspace",
+      "label": "MODE 1 \u2014 WORKSPACE",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "mode 1 \u2014 workspace",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "docs_design_system_mode_2_learner_live_quiz",
+      "label": "MODE 2 \u2014 LEARNER / LIVE QUIZ",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "mode 2 \u2014 learner / live quiz",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "docs_design_system_mode_3_marketing_discovery",
+      "label": "MODE 3 \u2014 MARKETING / DISCOVERY",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "mode 3 \u2014 marketing / discovery",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "docs_design_system_neutral_surfaces_workspace_mode",
+      "label": "Neutral Surfaces (Workspace mode)",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "neutral surfaces (workspace mode)",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "docs_design_system_quiz_answer_palette_learner_mode_only",
+      "label": "Quiz Answer Palette (Learner mode only)",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "quiz answer palette (learner mode only)",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "docs_design_system_secondary_kuis_purple",
+      "label": "Secondary (Kuis Purple)",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "secondary (kuis purple)",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L44"
+    },
+    {
+      "id": "docs_design_system_semantic",
+      "label": "Semantic",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "semantic",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "docs_design_system_text",
+      "label": "Text",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "text",
+      "source_file": "docs/DESIGN_SYSTEM.md",
+      "source_location": "L59"
     },
     {
       "id": "docs_design_system_these_identify_options_they_do_not_imply_correctness_by_themselves",
@@ -5189,113 +5686,36 @@
       "source_location": "L315"
     },
     {
-      "id": "app_quizzes_quizid_actions",
-      "label": "app/quizzes/[quizId]/actions.ts",
+      "id": "app_quizzes_page",
+      "label": "app/quizzes/page.tsx",
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "app/quizzes/[quizid]/actions.ts",
-      "source_file": "app/quizzes/[quizId]/actions.ts",
+      "norm_label": "app/quizzes/page.tsx",
+      "source_file": "app/quizzes/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_quizzes_quizid_take_form",
-      "label": "take-form.tsx",
+      "id": "app_quizzes_quizid_page",
+      "label": "app/quizzes/[quizId]/page.tsx",
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "take-form.tsx",
-      "source_file": "app/quizzes/[quizId]/take-form.tsx",
+      "norm_label": "app/quizzes/[quizid]/page.tsx",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "app_quizzes_quizid_take_form_initialstate",
-      "label": "initialState",
+      "id": "components_pending_link",
+      "label": "pending-link.tsx",
       "_origin": "ast",
       "community": 7,
-      "community_name": "play-form.tsx",
+      "community_name": "app/quizzes/page.tsx",
       "file_type": "code",
-      "norm_label": "initialstate",
-      "source_file": "app/quizzes/[quizId]/take-form.tsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "app_unlimited_actions",
-      "label": "unlimited/actions.ts",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "unlimited/actions.ts",
-      "source_file": "app/unlimited/actions.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_unlimited_sessionid_play_form",
-      "label": "play-form.tsx",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "play-form.tsx",
-      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_unlimited_sessionid_play_form_initialstate",
-      "label": "initialState",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "initialstate",
-      "source_file": "app/unlimited/[sessionId]/play-form.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "app_unlimited_setup_form",
-      "label": "setup-form.tsx",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "setup-form.tsx",
-      "source_file": "app/unlimited/setup-form.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_unlimited_setup_form_initialstate",
-      "label": "initialState",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "initialstate",
-      "source_file": "app/unlimited/setup-form.tsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "components_answer_options",
-      "label": "answer-options.tsx",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "answer-options.tsx",
-      "source_file": "components/answer-options.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_answer_options_tones",
-      "label": "TONES",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "play-form.tsx",
-      "file_type": "code",
-      "norm_label": "tones",
-      "source_file": "components/answer-options.tsx",
+      "norm_label": "pending-link.tsx",
+      "source_file": "components/pending-link.tsx",
       "source_location": "L1"
     },
     {
@@ -5989,6 +6409,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_admin_leaderboard_loading_loading",
+      "target": "components_loading_frame_leaderboardloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/admin/leaderboard/loading.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "app_admin_leaderboard_page_adminleaderboardpage",
       "target": "lib_session_getsessionprofile",
       "relation": "calls",
@@ -6010,6 +6442,18 @@
       "context": "call",
       "source_file": "app/admin/leaderboard/page.tsx",
       "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "app_admin_loading_loading",
+      "target": "components_loading_frame_adminloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/admin/loading.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6529,6 +6973,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_leaderboard_loading_loading",
+      "target": "components_loading_frame_leaderboardloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/leaderboard/loading.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "app_leaderboard_page_leaderboardpage",
       "target": "lib_session_getsessionprofile",
       "relation": "calls",
@@ -6637,6 +7093,30 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_loading_loading",
+      "target": "components_loading_frame_quizzesloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/loading.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page_quizcards",
+      "target": "components_pending_link_pendinglink",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_page_quizzespage",
       "target": "app_quizzes_page_searchfilter",
       "relation": "calls",
@@ -6645,7 +7125,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L127",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -6657,7 +7137,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L144",
+      "source_location": "L145",
       "weight": 1.0
     },
     {
@@ -6669,7 +7149,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L170",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -6681,7 +7161,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L177",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -6693,7 +7173,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L82",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -6705,7 +7185,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -6730,6 +7210,18 @@
       "context": "call",
       "source_file": "app/quizzes/[quizId]/actions.ts",
       "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_attempts_attemptid_loading_loading",
+      "target": "components_loading_frame_resultloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/loading.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6769,6 +7261,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_quizid_leaderboard_loading_loading",
+      "target": "components_loading_frame_boardpageloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/[quizId]/leaderboard/loading.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_quizid_leaderboard_page_quizleaderboardpage",
       "target": "lib_session_getsessionprofile",
       "relation": "calls",
@@ -6805,20 +7309,20 @@
       "weight": 1.0
     },
     {
-      "source": "app_quizzes_quizid_page_takequizpage",
-      "target": "lib_session_getsessionprofile",
+      "source": "app_quizzes_quizid_loading_loading",
+      "target": "components_loading_frame_quizstartloading",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "app/quizzes/[quizId]/page.tsx",
-      "source_location": "L14",
+      "source_file": "app/quizzes/[quizId]/loading.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
       "source": "app_quizzes_quizid_page_takequizpage",
-      "target": "lib_supabase_server_createclient",
+      "target": "lib_session_getsessionprofile",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6830,6 +7334,42 @@
     },
     {
       "source": "app_quizzes_quizid_page_takequizpage",
+      "target": "lib_supabase_server_createclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_page_takequizpage",
+      "target": "components_pending_link_pendinglink",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_page_takequizpage",
+      "target": "app_quizzes_quizid_page_countlabel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_page_takequizpage",
       "target": "app_quizzes_quizid_page_formatwhen",
       "relation": "calls",
       "_origin": "ast",
@@ -6837,7 +7377,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/[quizId]/page.tsx",
-      "source_location": "L75",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -6849,7 +7389,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/quizzes/[quizId]/page.tsx",
-      "source_location": "L86",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -6973,6 +7513,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_leaderboard_loading_loading",
+      "target": "components_loading_frame_boardpageloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/unlimited/leaderboard/loading.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_leaderboard_page_unlimitedleaderboardpage",
       "target": "lib_session_getsessionprofile",
       "relation": "calls",
@@ -7009,6 +7561,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_loading_loading",
+      "target": "components_loading_frame_unlimitedloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/unlimited/loading.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_page_unlimitedpage",
       "target": "lib_session_getsessionprofile",
       "relation": "calls",
@@ -7034,6 +7598,18 @@
     },
     {
       "source": "app_unlimited_page_unlimitedpage",
+      "target": "components_pending_link_pendinglink",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/unlimited/page.tsx",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_page_unlimitedpage",
       "target": "app_unlimited_setup_form_unlimitedsetupform",
       "relation": "calls",
       "_origin": "ast",
@@ -7054,6 +7630,18 @@
       "context": "call",
       "source_file": "app/unlimited/page.tsx",
       "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_sessionid_loading_loading",
+      "target": "components_loading_frame_resultloading",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/unlimited/[sessionId]/loading.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -7285,6 +7873,258 @@
       "weight": 1.0
     },
     {
+      "source": "components_loading_frame_adminloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L210",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_adminloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_boardpageloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_boardpageloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_boardpageloading",
+      "target": "components_loading_frame_tablerows",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_cardgrid",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_leaderboardloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_leaderboardloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_leaderboardloading",
+      "target": "components_loading_frame_tablerows",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_quizstartloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_quizstartloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_quizzesloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_quizzesloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_quizzesloading",
+      "target": "components_loading_frame_cardgrid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_resultloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_resultloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_resultloading",
+      "target": "components_loading_frame_tablerows",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_tablerows",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_unlimitedloading",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame_unlimitedloading",
+      "target": "components_loading_frame_bone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "components_pending_link_pendinglink",
+      "target": "components_pending_link_pendingmark",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
       "source": "components_result_recap_resultrecap",
       "target": "components_result_recap_answergroup",
       "relation": "calls",
@@ -7294,6 +8134,18 @@
       "context": "call",
       "source_file": "components/result-recap.tsx",
       "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "components_result_view_resultview",
+      "target": "components_pending_link_pendinglink",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/result-view.tsx",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -7329,36 +8181,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L280",
-      "weight": 1.0
-    },
-    {
-      "source": "components_site_nav_appchrome",
-      "target": "components_kuis_mark_kuislockup",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "components/site-nav.tsx",
-      "source_location": "L283",
-      "weight": 1.0
-    },
-    {
-      "source": "components_site_nav_appchrome",
-      "target": "components_site_nav_accountactions",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "components/site-nav.tsx",
       "source_location": "L285",
       "weight": 1.0
     },
     {
       "source": "components_site_nav_appchrome",
-      "target": "components_site_nav_footer",
+      "target": "components_kuis_mark_kuislockup",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7370,6 +8198,30 @@
     },
     {
       "source": "components_site_nav_appchrome",
+      "target": "components_site_nav_accountactions",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/site-nav.tsx",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "components_site_nav_appchrome",
+      "target": "components_site_nav_footer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/site-nav.tsx",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "components_site_nav_appchrome",
       "target": "components_site_nav_learnerheader",
       "relation": "calls",
       "_origin": "ast",
@@ -7377,7 +8229,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L297",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -7389,7 +8241,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L314",
+      "source_location": "L319",
       "weight": 1.0
     },
     {
@@ -7401,7 +8253,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L335",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -7413,7 +8265,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L337",
+      "source_location": "L342",
       "weight": 1.0
     },
     {
@@ -7425,7 +8277,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L274",
+      "source_location": "L279",
       "weight": 1.0
     },
     {
@@ -7437,7 +8289,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L250",
+      "source_location": "L255",
       "weight": 1.0
     },
     {
@@ -7449,7 +8301,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L203",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -7461,7 +8313,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L211",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "components_site_nav_learnerlinks",
+      "target": "components_pending_link_pendinglink",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "components/site-nav.tsx",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -7473,7 +8337,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0
     },
     {
@@ -7485,7 +8349,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L121",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -7849,6 +8713,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_admin_leaderboard_loading",
+      "target": "components_loading_frame_leaderboardloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/admin/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_admin_leaderboard_page",
       "target": "components_leaderboard_view_leaderboardview",
       "relation": "imports",
@@ -7881,6 +8757,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/admin/leaderboard/reset-forms.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_admin_loading",
+      "target": "components_loading_frame_adminloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/admin/loading.tsx",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -8377,6 +9265,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_leaderboard_loading",
+      "target": "components_loading_frame_leaderboardloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_leaderboard_page",
       "target": "components_leaderboard_view_leaderboardview",
       "relation": "imports",
@@ -8509,6 +9409,30 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_loading",
+      "target": "components_loading_frame_quizzesloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "components_pending_link_pendinglink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_page",
       "target": "lib_session_getsessionprofile",
       "relation": "imports",
@@ -8517,7 +9441,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -8529,7 +9453,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -8542,6 +9466,18 @@
       "context": "import",
       "source_file": "app/quizzes/[quizId]/actions.ts",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_attempts_attemptid_loading",
+      "target": "components_loading_frame_resultloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/loading.tsx",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -8593,6 +9529,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_quizid_leaderboard_loading",
+      "target": "components_loading_frame_boardpageloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_quizid_leaderboard_page",
       "target": "components_leaderboard_table_leaderboardentry",
       "relation": "imports",
@@ -8638,6 +9586,30 @@
       "context": "import",
       "source_file": "app/quizzes/[quizId]/leaderboard/page.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_loading",
+      "target": "components_loading_frame_quizstartloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_page",
+      "target": "components_pending_link_pendinglink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -8809,6 +9781,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_leaderboard_loading",
+      "target": "components_loading_frame_boardpageloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_leaderboard_page",
       "target": "components_leaderboard_table_leaderboardentry",
       "relation": "imports",
@@ -8857,6 +9841,30 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_loading",
+      "target": "components_loading_frame_unlimitedloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_page",
+      "target": "components_pending_link_pendinglink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_page",
       "target": "lib_session_getsessionprofile",
       "relation": "imports",
@@ -8890,6 +9898,18 @@
       "context": "import",
       "source_file": "app/unlimited/page.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_sessionid_loading",
+      "target": "components_loading_frame_resultloading",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/[sessionId]/loading.tsx",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -9122,6 +10142,18 @@
     },
     {
       "source": "components_result_view",
+      "target": "components_pending_link_pendinglink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/result-view.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "components_result_view",
       "target": "components_leaderboard_table_leaderboardentry",
       "relation": "imports",
       "_origin": "ast",
@@ -9214,6 +10246,18 @@
       "context": "import",
       "source_file": "components/site-nav.tsx",
       "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "components_site_nav",
+      "target": "components_pending_link_pendinglink",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/site-nav.tsx",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -9685,6 +10729,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_admin_leaderboard_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/admin/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_admin_leaderboard_page",
       "target": "ref_next",
       "relation": "imports_from",
@@ -9729,6 +10785,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/admin/leaderboard/reset-forms.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_admin_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/admin/loading.tsx",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -10263,6 +11331,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_leaderboard_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_leaderboard_page",
       "target": "ref_next",
       "relation": "imports_from",
@@ -10431,8 +11511,20 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_page",
-      "target": "ref_react",
+      "target": "components_pending_link",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10444,7 +11536,7 @@
     },
     {
       "source": "app_quizzes_page",
-      "target": "ref_next",
+      "target": "ref_react",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10456,7 +11548,7 @@
     },
     {
       "source": "app_quizzes_page",
-      "target": "lib_session",
+      "target": "ref_next",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10468,7 +11560,7 @@
     },
     {
       "source": "app_quizzes_page",
-      "target": "lib_supabase_server",
+      "target": "lib_session",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10476,6 +11568,18 @@
       "context": "import",
       "source_file": "app/quizzes/page.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "lib_supabase_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -10500,6 +11604,18 @@
       "context": "import",
       "source_file": "app/quizzes/[quizId]/actions.ts",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_attempts_attemptid_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/loading.tsx",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -10563,6 +11679,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_quizid_leaderboard_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_quizid_leaderboard_page",
       "target": "ref_next",
       "relation": "imports_from",
@@ -10611,8 +11739,32 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_quizid_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_quizid_page",
       "target": "ref_next",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_page",
+      "target": "components_pending_link",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10827,6 +11979,18 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_leaderboard_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/leaderboard/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_leaderboard_page",
       "target": "ref_next",
       "relation": "imports_from",
@@ -10875,6 +12039,30 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/loading.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_page",
+      "target": "components_pending_link",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/page.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_page",
       "target": "ref_next",
       "relation": "imports_from",
@@ -10920,6 +12108,18 @@
       "context": "import",
       "source_file": "app/unlimited/page.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_sessionid_loading",
+      "target": "components_loading_frame",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/unlimited/[sessionId]/loading.tsx",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -11236,6 +12436,30 @@
       "weight": 1.0
     },
     {
+      "source": "components_pending_link",
+      "target": "ref_next",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "components_pending_link",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "components_quiz_board_picker",
       "target": "ref_react",
       "relation": "imports_from",
@@ -11273,7 +12497,7 @@
     },
     {
       "source": "components_result_view",
-      "target": "ref_next",
+      "target": "components_pending_link",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11354,6 +12578,18 @@
       "context": "import",
       "source_file": "components/site-nav.tsx",
       "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "components_site_nav",
+      "target": "components_pending_link",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "components/site-nav.tsx",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -11805,6 +13041,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_admin_leaderboard_loading",
+      "target": "app_admin_leaderboard_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/leaderboard/loading.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "app_admin_leaderboard_page",
       "target": "app_admin_leaderboard_page_adminleaderboardpage",
       "relation": "contains",
@@ -11823,6 +13070,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/admin/leaderboard/reset-forms.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_admin_loading",
+      "target": "app_admin_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/admin/loading.tsx",
       "source_location": "L3",
       "weight": 1.0
     },
@@ -12322,6 +13580,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_leaderboard_loading",
+      "target": "app_leaderboard_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/leaderboard/loading.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "app_leaderboard_page",
       "target": "app_leaderboard_page_leaderboardpage",
       "relation": "contains",
@@ -12399,80 +13668,14 @@
       "weight": 1.0
     },
     {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_quizcard",
+      "source": "app_quizzes_loading",
+      "target": "app_quizzes_loading_loading",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_trendingrow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_coursenameof",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_cataloghref",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L32",
-      "weight": 1.0
-    },
-    {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_searchfilter",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L41",
-      "weight": 1.0
-    },
-    {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_quizcards",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "app_quizzes_page",
-      "target": "app_quizzes_page_quizzespage",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/quizzes/page.tsx",
-      "source_location": "L77",
+      "source_file": "app/quizzes/loading.tsx",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -12483,7 +13686,84 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/quizzes/page.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_quizcard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_trendingrow",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_coursenameof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_cataloghref",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_searchfilter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_quizcards",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_page",
+      "target": "app_quizzes_page_quizzespage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/page.tsx",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -12520,6 +13800,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_quizid_attempts_attemptid_loading",
+      "target": "app_quizzes_quizid_attempts_attemptid_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/loading.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_quizid_attempts_attemptid_page",
       "target": "app_quizzes_quizid_attempts_attemptid_page_attemptpage",
       "relation": "contains",
@@ -12539,6 +13830,17 @@
       "confidence_score": 1.0,
       "source_file": "app/quizzes/[quizId]/attempts/[attemptId]/page.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_leaderboard_loading",
+      "target": "app_quizzes_quizid_leaderboard_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/[quizId]/leaderboard/loading.tsx",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -12564,6 +13866,28 @@
       "weight": 1.0
     },
     {
+      "source": "app_quizzes_quizid_loading",
+      "target": "app_quizzes_quizid_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/[quizId]/loading.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_quizzes_quizid_page",
+      "target": "app_quizzes_quizid_page_countlabel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/quizzes/[quizId]/page.tsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
       "source": "app_quizzes_quizid_page",
       "target": "app_quizzes_quizid_page_takequizpage",
       "relation": "contains",
@@ -12571,7 +13895,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/quizzes/[quizId]/page.tsx",
-      "source_location": "L13",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -12718,6 +14042,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_leaderboard_loading",
+      "target": "app_unlimited_leaderboard_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/unlimited/leaderboard/loading.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_leaderboard_page",
       "target": "app_unlimited_leaderboard_page_unlimitedleaderboardpage",
       "relation": "contains",
@@ -12740,6 +14075,17 @@
       "weight": 1.0
     },
     {
+      "source": "app_unlimited_loading",
+      "target": "app_unlimited_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/unlimited/loading.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "app_unlimited_page",
       "target": "app_unlimited_page_unlimitedpage",
       "relation": "contains",
@@ -12759,6 +14105,17 @@
       "confidence_score": 1.0,
       "source_file": "app/unlimited/page.tsx",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_unlimited_sessionid_loading",
+      "target": "app_unlimited_sessionid_loading_loading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/unlimited/[sessionId]/loading.tsx",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -13092,6 +14449,149 @@
       "weight": 1.0
     },
     {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_bone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_resultloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_leaderboardloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_unlimitedloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_boardpageloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L191",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_adminloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_cardgrid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_tablerows",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_loadingshell",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_quizzesloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "components_loading_frame",
+      "target": "components_loading_frame_quizstartloading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/loading-frame.tsx",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "components_pending_link",
+      "target": "components_pending_link_pendinglink",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "components_pending_link",
+      "target": "components_pending_link_pendingmark",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/pending-link.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "components_quiz_board_picker",
       "target": "components_quiz_board_picker_quizboardpicker",
       "relation": "contains",
@@ -13187,7 +14687,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L158",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -13198,7 +14698,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L183",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -13209,18 +14709,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L247",
-      "weight": 1.0
-    },
-    {
-      "source": "components_site_nav",
-      "target": "components_site_nav_collapsedlisteners",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "components/site-nav.tsx",
-      "source_location": "L26",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -13231,7 +14720,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L260",
+      "source_location": "L265",
+      "weight": 1.0
+    },
+    {
+      "source": "components_site_nav",
+      "target": "components_site_nav_collapsedlisteners",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "components/site-nav.tsx",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -13242,7 +14742,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -13253,7 +14753,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -13264,7 +14764,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -13275,7 +14775,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -13286,7 +14786,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -13297,7 +14797,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L61",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -13308,7 +14808,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L87",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -13319,7 +14819,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/site-nav.tsx",
-      "source_location": "L273",
+      "source_location": "L278",
       "weight": 1.0
     },
     {
@@ -16008,7 +17508,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L269",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
@@ -16020,7 +17520,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "components/site-nav.tsx",
-      "source_location": "L269",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
@@ -16073,5 +17573,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "af608891e87bb4e8c9fa274f4dbf134504b30e4f"
+  "built_at_commit": "b23429376c8cac5cc54707c0544ec628240e6972"
 }

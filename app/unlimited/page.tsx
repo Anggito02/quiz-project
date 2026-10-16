@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { PendingLink } from "@/components/pending-link";
 import { redirect } from "next/navigation";
 import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
@@ -37,9 +37,9 @@ export default async function UnlimitedPage() {
         in those courses.
       </p>
       <p className="mt-4 flex flex-wrap gap-4">
-        <Link href="/leaderboard?minutes=5">5 minute board</Link>
-        <Link href="/leaderboard?minutes=10">10 minute board</Link>
-        <Link href="/leaderboard?minutes=20">20 minute board</Link>
+        <PendingLink href="/leaderboard?minutes=5">5 minute board</PendingLink>
+        <PendingLink href="/leaderboard?minutes=10">10 minute board</PendingLink>
+        <PendingLink href="/leaderboard?minutes=20">20 minute board</PendingLink>
       </p>
       {profile.role === "student" ? (
         courses.length === 0 ? (
@@ -62,10 +62,10 @@ export default async function UnlimitedPage() {
               .join(", ");
             return (
               <li key={session.id}>
-                <Link href={`/unlimited/${session.id}`}>
+                <PendingLink href={`/unlimited/${session.id}`}>
                   {formatWhen(session.submitted_at)} — {session.duration_minutes} min —{" "}
                   {session.correct_count} correct
-                </Link>
+                </PendingLink>
                 <p className="muted mt-1">{names}</p>
               </li>
             );

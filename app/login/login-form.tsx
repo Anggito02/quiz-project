@@ -37,8 +37,8 @@ export function LoginForm() {
         />
       </div>
       {state.error ? <p className="error-text">{state.error}</p> : null}
-      <button className="btn btn-primary" type="submit" disabled={pending}>
-        Log in
+      <button className="btn btn-primary" type="submit" disabled={pending} aria-busy={pending}>
+        {pending ? "Logging in…" : "Log in"}
       </button>
     </form>
   );

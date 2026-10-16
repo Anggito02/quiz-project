@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { PendingLink } from "@/components/pending-link";
 import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
 import { TakeQuizForm } from "./take-form";
@@ -8,6 +8,10 @@ function formatWhen(value: string) {
   return new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle: "short" }).format(
     new Date(value),
   );
+}
+
+function countLabel(count: number, singular: string, plural: string) {
+  return `${count} ${count === 1 ? singular : plural}`;
 }
 
 export default async function TakeQuizPage({ params }: { params: Promise<{ quizId: string }> }) {
@@ -55,38 +59,43 @@ export default async function TakeQuizPage({ params }: { params: Promise<{ quizI
 
   return (
     <main className="page quiz-detail">
-      <p>
-        <Link href="/quizzes">All quizzes</Link>
-      </p>
-      <h1 className="mt-4">{quiz.title}</h1>
-      {quiz.description ? <p className="mt-4 max-w-[72ch]">{quiz.description}</p> : null}
-      <p className="mt-4">
-        <Link href={`/leaderboard?quiz=${quiz.id}`}>Leaderboard</Link>
-      </p>
-
-      <h2 className="mt-12">Your attempts</h2>
-      {attempts.length === 0 ? (
-        <p className="mt-4">No attempts yet.</p>
-      ) : (
-        <ul className="ruled-list mt-4">
-          {attempts.map((attempt) => (
-            <li key={attempt.id}>
-              <Link href={`/quizzes/${quiz.id}/attempts/${attempt.id}`}>
-                {formatWhen(attempt.submitted_at)} — {attempt.score}%
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <h2 className="mt-12">Start</h2>
-      {questions.length === 0 ? (
-        <p className="mt-4">This quiz has no questions yet.</p>
-      ) : profile.role === "student" ? (
-        <TakeQuizForm quizId={quiz.id} questions={questions} />
-      ) : (
-        <p className="mt-4">Only students can submit an attempt.</p>
-      )}
+      <section className="board-panel quiz-start-card">
+        <PendingLink className="btn btn-ghost btn-sm" href="/quizzes">
+          All quizzes
+        </PendingLink>
+        <h1>{quiz.title}</h1>
+        {quiz.description ? <p className="lede">{quiz.description}</p> : null}
+        <p className="quiz-meta muted">
+          {countLabel(questions.length, "question", "questions")} ·{" "}
+          {countLabel(attempts.length, "attempt", "attempts")}
+        </p>
+        <h2>Your attempts</h2>
+        {attempts.length === 0 ? (
+          <p className="muted">No attempts yet.</p>
+        ) : (
+          <ul className="ruled-list">
+            {attempts.map((attempt) => (
+              <li key={attempt.id}>
+                <PendingLink href={`/quizzes/${quiz.id}/attempts/${attempt.id}`}>
+                  {formatWhen(attempt.submitted_at)} — {attempt.score}%
+                </PendingLink>
+              </li>
+            ))}
+          </ul>
+        )}
+        <div className="quiz-start-actions">
+          {questions.length === 0 ? (
+            <p>This quiz has no questions yet.</p>
+          ) : profile.role === "student" ? (
+            <TakeQuizForm quizId={quiz.id} questions={questions} />
+          ) : (
+            <p>Only students can submit an attempt.</p>
+          )}
+          <PendingLink className="btn btn-ghost btn-sm" href={`/leaderboard?quiz=${quiz.id}`}>
+            Leaderboard
+          </PendingLink>
+        </div>
+      </section>
     </main>
   );
 }

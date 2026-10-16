@@ -22,6 +22,7 @@ import { logOut } from "@/app/auth/logout";
 import type { SessionProfile } from "@/lib/session";
 import { AmbientBackdrop } from "./ambient-backdrop";
 import { KuisLockup, KuisMark } from "./kuis-mark";
+import { PendingLink } from "./pending-link";
 
 const collapsedListeners = new Set<() => void>();
 
@@ -165,9 +166,13 @@ function LearnerLinks({
   onNavigate?: () => void;
 }) {
   const item = (href: string, label: string, active = pathname === href || pathname.startsWith(`${href}/`)) => (
-    <Link className={active ? "learner-nav-link is-active" : "learner-nav-link"} href={href} onClick={onNavigate}>
+    <PendingLink
+      className={active ? "learner-nav-link is-active" : "learner-nav-link"}
+      href={href}
+      onClick={onNavigate}
+    >
       {label}
-    </Link>
+    </PendingLink>
   );
 
   return (
