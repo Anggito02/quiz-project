@@ -4,6 +4,8 @@ import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
 import { UnlimitedSetupForm } from "./setup-form";
 
+const RECENT_RUNS = 20;
+
 function formatWhen(value: string) {
   return new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle: "short" }).format(
     new Date(value),
@@ -15,19 +17,23 @@ export default async function UnlimitedPage() {
   if (!profile) redirect("/login");
 
   const supabase = await createClient();
-  const [{ data: courseData }, { data: sessionData }] = await Promise.all([
+  const [{ data: courseData }, { data: sessionData, count: sessionCount }] = await Promise.all([
     supabase.from("courses").select("id, name").order("name", { ascending: true }),
     supabase
       .from("unlimited_sessions")
-      .select("id, duration_minutes, course_ids, correct_count, question_count, submitted_at")
+      .select("id, duration_minutes, course_ids, correct_count, question_count, submitted_at", {
+        count: "exact",
+      })
       .eq("student_id", profile.id)
       .not("submitted_at", "is", null)
-      .order("submitted_at", { ascending: false }),
+      .order("submitted_at", { ascending: false })
+      .limit(RECENT_RUNS),
   ]);
 
   const courses = (courseData ?? []) as { id: string; name: string }[];
   const courseName = new Map(courses.map((course) => [course.id, course.name]));
   const sessions = sessionData ?? [];
+  const totalSessions = sessionCount ?? sessions.length;
 
   return (
     <main className="page">
@@ -52,6 +58,11 @@ export default async function UnlimitedPage() {
       )}
 
       <h2 className="mt-12">Your timed runs</h2>
+      {totalSessions > sessions.length ? (
+        <p className="muted mt-2">
+          Your latest {sessions.length} of {totalSessions} runs.
+        </p>
+      ) : null}
       {sessions.length === 0 ? (
         <p className="mt-4">No timed runs yet.</p>
       ) : (

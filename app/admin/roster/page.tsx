@@ -22,8 +22,9 @@ export default async function RosterPage() {
     <main className="page">
       <h1>Roster</h1>
       <p className="mt-4 max-w-[72ch]">
-        Add the emails that may sign up, and set each email&apos;s role and class. People choose
-        their own password at sign-up.
+        Add the emails that may sign up, and set each email&apos;s role and class. A rule such as
+        *@corp.gmail.com allows every address at that domain. An exact email overrides a rule.
+        People choose their own password at sign-up.
       </p>
       <AddEmailForm classes={classes} />
 
@@ -42,7 +43,10 @@ export default async function RosterPage() {
             <tbody>
               {rows.map((row) => (
                 <tr key={row.email}>
-                  <td>{row.email}</td>
+                  <td>
+                    {row.email}
+                    {row.email.includes("*") ? <div className="muted">Wildcard</div> : null}
+                  </td>
                   <td>
                     <form action={updateRole} className="flex flex-wrap items-center gap-2">
                       <input type="hidden" name="email" value={row.email} />

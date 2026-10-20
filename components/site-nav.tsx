@@ -119,7 +119,7 @@ function Sidebar({
     >
       <div className="sidebar-head">
         <Link href="/" onClick={onNavigate} aria-label="Dirman Quiz home">
-          <KuisLockup markSize={32} />
+          <KuisLockup markSize={32} variant={collapsed ? "compact" : "full"} />
         </Link>
         <button
           className="btn btn-ghost btn-sm sidebar-collapse"

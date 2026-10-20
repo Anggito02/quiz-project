@@ -189,41 +189,43 @@ export async function importQuestions(
     .select("id", { count: "exact", head: true })
     .eq("quiz_id", quizId);
   const start = count ?? 0;
-  const createdIds: string[] = [];
+  const failed = { error: "Could not save the questions. Nothing from that file was kept." };
 
-  for (const [index, question] of parsed.questions.entries()) {
-    const { data: created, error: createError } = await supabase
-      .from("questions")
-      .insert({
+  const { data: created, error: createError } = await supabase
+    .from("questions")
+    .insert(
+      parsed.questions.map((question, index) => ({
         quiz_id: quizId,
         prompt: question.prompt,
         type: question.type,
         position: start + index,
-      })
-      .select("id")
-      .single();
+      })),
+    )
+    .select("id, position");
 
-    if (createError || !created) {
-      if (createdIds.length > 0) {
-        await supabase.from("questions").delete().in("id", createdIds);
-      }
-      return { error: "Could not save the questions. Nothing from that file was kept." };
+  const createdIds = (created ?? []).map((row) => row.id);
+  if (createError || createdIds.length !== parsed.questions.length) {
+    if (createdIds.length > 0) {
+      await supabase.from("questions").delete().in("id", createdIds);
     }
+    return failed;
+  }
 
-    createdIds.push(created.id);
-    const { error: optionError } = await supabase.from("options").insert(
+  const idByPosition = new Map((created ?? []).map((row) => [row.position, row.id]));
+  const { error: optionError } = await supabase.from("options").insert(
+    parsed.questions.flatMap((question, index) =>
       question.options.map((option, position) => ({
-        question_id: created.id,
+        question_id: idByPosition.get(start + index),
         label: option.label,
         is_correct: option.isCorrect,
         position,
       })),
-    );
+    ),
+  );
 
-    if (optionError) {
-      await supabase.from("questions").delete().in("id", createdIds);
-      return { error: "Could not save the questions. Nothing from that file was kept." };
-    }
+  if (optionError) {
+    await supabase.from("questions").delete().in("id", createdIds);
+    return failed;
   }
 
   revalidatePath(quizPath(quizId));
@@ -266,9 +268,14 @@ export async function moveQuestion(formData: FormData) {
   if (!moved) return;
   reordered.splice(swapWith, 0, moved);
 
+  // Usually just the two swapped rows; more only when deletes left gaps in the positions.
+  const changed = reordered
+    .map((row, position) => ({ id: row.id, position, before: row.position }))
+    .filter((row) => row.position !== row.before);
+
   await Promise.all(
-    reordered.map((row, position) =>
-      supabase.from("questions").update({ position }).eq("id", row.id),
+    changed.map((row) =>
+      supabase.from("questions").update({ position: row.position }).eq("id", row.id),
     ),
   );
 

@@ -10,6 +10,8 @@ function formatWhen(value: string) {
   );
 }
 
+const RECENT_ATTEMPTS = 20;
+
 function countLabel(count: number, singular: string, plural: string) {
   return `${count} ${count === 1 ? singular : plural}`;
 }
@@ -20,19 +22,28 @@ export default async function TakeQuizPage({ params }: { params: Promise<{ quizI
 
   const { quizId } = await params;
   const supabase = await createClient();
-  const { data: quiz } = await supabase
-    .from("quizzes")
-    .select("id, title, description, status")
-    .eq("id", quizId)
-    .maybeSingle();
+  const [{ data: quiz }, { data: questionData }, { data: attemptData, count: attemptCount }] =
+    await Promise.all([
+      supabase
+        .from("quizzes")
+        .select("id, title, description, status")
+        .eq("id", quizId)
+        .maybeSingle(),
+      supabase
+        .from("questions")
+        .select("id, prompt, type, position, options(id, label, position)")
+        .eq("quiz_id", quizId)
+        .order("position", { ascending: true }),
+      supabase
+        .from("attempts")
+        .select("id, score, submitted_at", { count: "exact" })
+        .eq("quiz_id", quizId)
+        .eq("student_id", profile.id)
+        .order("submitted_at", { ascending: false })
+        .limit(RECENT_ATTEMPTS),
+    ]);
 
   if (!quiz || quiz.status !== "published") notFound();
-
-  const { data: questionData } = await supabase
-    .from("questions")
-    .select("id, prompt, type, position, options(id, label, position)")
-    .eq("quiz_id", quizId)
-    .order("position", { ascending: true });
 
   const questions = (questionData ?? [])
     .map((question) => {
@@ -48,14 +59,8 @@ export default async function TakeQuizPage({ params }: { params: Promise<{ quizI
     })
     .filter((question) => question.options.length >= 2);
 
-  const { data: attemptData } = await supabase
-    .from("attempts")
-    .select("id, score, submitted_at")
-    .eq("quiz_id", quizId)
-    .eq("student_id", profile.id)
-    .order("submitted_at", { ascending: false });
-
   const attempts = attemptData ?? [];
+  const totalAttempts = attemptCount ?? attempts.length;
 
   return (
     <main className="page quiz-detail">
@@ -67,9 +72,12 @@ export default async function TakeQuizPage({ params }: { params: Promise<{ quizI
         {quiz.description ? <p className="lede">{quiz.description}</p> : null}
         <p className="quiz-meta muted">
           {countLabel(questions.length, "question", "questions")} ·{" "}
-          {countLabel(attempts.length, "attempt", "attempts")}
+          {countLabel(totalAttempts, "attempt", "attempts")}
         </p>
         <h2>Your attempts</h2>
+        {totalAttempts > attempts.length ? (
+          <p className="muted">Your latest {attempts.length} attempts.</p>
+        ) : null}
         {attempts.length === 0 ? (
           <p className="muted">No attempts yet.</p>
         ) : (

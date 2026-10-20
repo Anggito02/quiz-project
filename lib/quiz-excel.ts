@@ -1,5 +1,9 @@
-import ExcelJS from "exceljs";
+import type ExcelJS from "exceljs";
 import { cleanOptions, validateQuestion, type OptionDraft, type QuestionType } from "@/lib/quiz-validation";
+
+async function loadExcel() {
+  return (await import("exceljs")).default;
+}
 
 export const MAX_IMPORT_QUESTIONS = 200;
 export const MAX_IMPORT_BYTES = 2 * 1024 * 1024;
@@ -29,7 +33,8 @@ function cellText(cell: ExcelJS.Cell) {
 }
 
 export async function buildQuizTemplate() {
-  const workbook = new ExcelJS.Workbook();
+  const Excel = await loadExcel();
+  const workbook = new Excel.Workbook();
   const questions = workbook.addWorksheet("Questions");
   questions.addRow([...HEADERS]);
   questions.getRow(1).font = { bold: true };
@@ -112,7 +117,8 @@ export async function buildQuizTemplate() {
 export async function parseQuizWorkbook(
   bytes: Buffer,
 ): Promise<{ questions: ImportedQuestion[] } | { error: string }> {
-  const workbook = new ExcelJS.Workbook();
+  const Excel = await loadExcel();
+  const workbook = new Excel.Workbook();
   try {
     await workbook.xlsx.load(bytes as unknown as Parameters<ExcelJS.Xlsx["load"]>[0]);
   } catch {

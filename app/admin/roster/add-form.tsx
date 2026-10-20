@@ -12,9 +12,20 @@ export function AddEmailForm({ classes }: { classes: { id: string; name: string 
     <form action={action} className="card mt-8 grid max-w-xl gap-4">
       <div className="field">
         <label className="label" htmlFor="email">
-          Email
+          Email or rule
         </label>
-        <input className="input" id="email" name="email" type="email" required />
+        <input
+          className="input"
+          id="email"
+          name="email"
+          type="text"
+          required
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
+          placeholder="*@corp.gmail.com"
+        />
+        <p className="muted">Use * to allow every address at a domain, for example *@corp.gmail.com.</p>
       </div>
       <div className="field">
         <label className="label" htmlFor="role">

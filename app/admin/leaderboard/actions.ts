@@ -38,8 +38,15 @@ export async function resetLeaderboard(formData: FormData) {
 
   revalidatePath("/leaderboard");
   revalidatePath("/admin/leaderboard");
-  revalidatePath("/quizzes", "layout");
-  revalidatePath("/unlimited", "layout");
+  if (quizId) {
+    revalidatePath("/quizzes");
+    revalidatePath(`/quizzes/${quizId}`, "layout");
+  } else if (duration) {
+    revalidatePath("/unlimited", "layout");
+  } else {
+    revalidatePath("/quizzes", "layout");
+    revalidatePath("/unlimited", "layout");
+  }
 
   const next = new URLSearchParams();
   next.set("reset", scope === "all" ? "all" : "board");

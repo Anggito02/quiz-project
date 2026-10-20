@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { CreateQuizForm } from "./create-form";
 
+const PAGE_SIZE = 60;
+
 type QuizRow = {
   id: string;
   title: string;
@@ -30,18 +32,29 @@ function groupByCourse(quizzes: QuizRow[]) {
   });
 }
 
-export default async function QuizBuilderPage() {
+export default async function QuizBuilderPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+  const requestedPage = Number(pageParam);
+  const page = Number.isInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+  const from = (page - 1) * PAGE_SIZE;
+
   const supabase = await createClient();
-  const [{ data }, { data: courseData }] = await Promise.all([
+  const [{ data, count }, { data: courseData }] = await Promise.all([
     supabase
       .from("quizzes")
-      .select("id, title, description, status, courses(name)")
-      .order("created_at", { ascending: false }),
+      .select("id, title, description, status, courses(name)", { count: "exact" })
+      .order("created_at", { ascending: false })
+      .range(from, from + PAGE_SIZE - 1),
     supabase.from("courses").select("id, name").order("name", { ascending: true }),
   ]);
 
   const quizzes = (data ?? []) as QuizRow[];
   const courses = (courseData ?? []) as { id: string; name: string }[];
+  const pageCount = Math.ceil((count ?? 0) / PAGE_SIZE);
 
   return (
     <main className="page">
@@ -71,6 +84,23 @@ export default async function QuizBuilderPage() {
           </section>
         ))
       )}
+      {pageCount > 1 ? (
+        <nav className="pager" aria-label="Pages">
+          {page > 1 ? (
+            <Link className="btn btn-ghost btn-sm" href={`/admin/quizzes?page=${page - 1}`}>
+              Previous
+            </Link>
+          ) : null}
+          <span className="muted">
+            Page {page} of {pageCount}
+          </span>
+          {page < pageCount ? (
+            <Link className="btn btn-ghost btn-sm" href={`/admin/quizzes?page=${page + 1}`}>
+              Next
+            </Link>
+          ) : null}
+        </nav>
+      ) : null}
     </main>
   );
 }

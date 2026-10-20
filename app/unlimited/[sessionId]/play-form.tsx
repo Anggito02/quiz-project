@@ -60,25 +60,35 @@ export function UnlimitedPlayForm({
   }
 
   useEffect(() => {
+    const deadline = new Date(endsAt).getTime();
+    let tickTimer = 0;
     let submitTimer = 0;
-    const timer = window.setInterval(() => {
-      const next = Math.max(0, new Date(endsAt).getTime() - Date.now());
+
+    // Wake when the displayed second changes, not on a fixed interval.
+    const delayFor = (left: number) => (left > 0 ? (left % 1000 || 1000) + 5 : 0);
+
+    function tick() {
+      const next = Math.max(0, deadline - Date.now());
       setRemaining(next);
-      if (next === 0 && !armed.current && !sent.current) {
-        armed.current = true;
-        window.clearInterval(timer);
-        setTimeUp(true);
-        submitTimer = window.setTimeout(() => {
-          const questionId = questionIdRef.current;
-          if (questionId && !(questionId in answersRef.current)) {
-            answersRef.current = { ...answersRef.current, [questionId]: [] };
-          }
-          formRef.current?.requestSubmit();
-        }, 2500);
+      if (next > 0) {
+        tickTimer = window.setTimeout(tick, delayFor(next));
+        return;
       }
-    }, 250);
+      if (armed.current || sent.current) return;
+      armed.current = true;
+      setTimeUp(true);
+      submitTimer = window.setTimeout(() => {
+        const questionId = questionIdRef.current;
+        if (questionId && !(questionId in answersRef.current)) {
+          answersRef.current = { ...answersRef.current, [questionId]: [] };
+        }
+        formRef.current?.requestSubmit();
+      }, 2500);
+    }
+
+    tickTimer = window.setTimeout(tick, delayFor(Math.max(0, deadline - Date.now())));
     return () => {
-      window.clearInterval(timer);
+      window.clearTimeout(tickTimer);
       window.clearTimeout(submitTimer);
     };
   }, [endsAt]);

@@ -23,6 +23,15 @@ type UnlimitedRow = {
 
 type CourseEmbed = { id: string; name: string } | { id: string; name: string }[] | null;
 
+const PICKER_LIMIT = 500;
+
+type PickerQuizRow = {
+  id: string;
+  title: string;
+  course_id: string | null;
+  courses: CourseEmbed;
+};
+
 type QuizOption = {
   id: string;
   title: string;
@@ -100,21 +109,29 @@ export async function LeaderboardView({
   intro?: string;
 }) {
   const supabase = await createClient();
+  const quizColumns = "id, title, course_id, courses(id, name)";
   const [{ data: quizData }, { data: classData }] = await Promise.all([
     supabase
       .from("quizzes")
-      .select("id, title, course_id, courses(id, name)")
+      .select(quizColumns)
       .eq("status", "published")
-      .order("title", { ascending: true }),
+      .order("title", { ascending: true })
+      .limit(PICKER_LIMIT),
     supabase.from("classes").select("id, name").order("name", { ascending: true }),
   ]);
 
-  const quizzes = ((quizData ?? []) as {
-    id: string;
-    title: string;
-    course_id: string | null;
-    courses: CourseEmbed;
-  }[]).map((quiz) => {
+  const quizRows = (quizData ?? []) as PickerQuizRow[];
+  if (quizId && quizRows.length === PICKER_LIMIT && !quizRows.some((quiz) => quiz.id === quizId)) {
+    const { data: linked } = await supabase
+      .from("quizzes")
+      .select(quizColumns)
+      .eq("status", "published")
+      .eq("id", quizId)
+      .maybeSingle();
+    if (linked) quizRows.push(linked as PickerQuizRow);
+  }
+
+  const quizzes = quizRows.map((quiz) => {
     const course = courseOf(quiz.courses, quiz.course_id);
     return {
       id: quiz.id,
