@@ -56,6 +56,7 @@ function pageTitle(pathname: string) {
   if (pathname.startsWith("/leaderboard")) return "Leaderboard";
   if (pathname.startsWith("/unlimited")) return "Unlimited";
   if (pathname.startsWith("/quizzes")) return "Quizzes";
+  if (pathname.startsWith("/profile")) return "Profile";
   return "kuis";
 }
 
@@ -63,7 +64,9 @@ function AccountActions({ profile }: { profile: SessionProfile | null }) {
   if (profile) {
     return (
       <div className="topbar-actions">
-        <span className="muted">{profile.displayName}</span>
+        <Link className="muted" href="/profile">
+          {profile.displayName}
+        </Link>
         <form action={logOut}>
           <button className="btn btn-ghost btn-sm" type="submit">
             Log out
@@ -141,6 +144,7 @@ function Sidebar({
         {item("/quizzes", "Quizzes", <ListChecks aria-hidden="true" size={18} />)}
         {item("/unlimited", "Unlimited", <Timer aria-hidden="true" size={18} />)}
         {item("/leaderboard", "Leaderboard", <Trophy aria-hidden="true" size={18} />)}
+        {item("/profile", "Profile", <User aria-hidden="true" size={18} />)}
         {profile.role === "admin" ? (
           <>
             <p className="sidebar-label">Manage</p>
@@ -180,6 +184,7 @@ function LearnerLinks({
       {item("/quizzes", "Quizzes")}
       {item("/unlimited", "Unlimited")}
       {item("/leaderboard", "Leaderboard")}
+      {item("/profile", "Profile")}
       {profile.role === "admin" ? item("/admin/quizzes", "Admin", pathname.startsWith("/admin")) : null}
     </>
   );
@@ -234,10 +239,10 @@ function LearnerHeader({ profile, pathname }: { profile: SessionProfile; pathnam
           <LearnerLinks profile={profile} pathname={pathname} />
         </nav>
         <div className="topbar-actions">
-          <span className="user-pill">
+          <Link className="user-pill" href="/profile">
             <User aria-hidden="true" size={16} />
             <span>{profile.displayName}</span>
-          </span>
+          </Link>
           <form action={logOut}>
             <button className="btn btn-ghost btn-sm" type="submit">
               Log out

@@ -5,7 +5,12 @@ import { signUp, type SignUpState } from "./actions";
 
 const initialState: SignUpState = {};
 
-export function SignUpForm() {
+type ClassOption = {
+  id: string;
+  name: string;
+};
+
+export function SignUpForm({ classes }: { classes: ClassOption[] }) {
   const [state, action, pending] = useActionState(signUp, initialState);
 
   return (
@@ -22,6 +27,22 @@ export function SignUpForm() {
           autoComplete="nickname"
           required
         />
+      </div>
+      <div className="field">
+        <label className="label" htmlFor="classId">
+          Class
+        </label>
+        <select className="input" id="classId" name="classId" defaultValue="" required>
+          <option value="" disabled>
+            Choose your class
+          </option>
+          {classes.map((row) => (
+            <option key={row.id} value={row.id}>
+              {row.name}
+            </option>
+          ))}
+        </select>
+        <p className="muted">If your email was added with a domain rule, you can change this later from your profile.</p>
       </div>
       <div className="field">
         <label className="label" htmlFor="email">
@@ -51,7 +72,12 @@ export function SignUpForm() {
       </div>
       {state.error ? <p className="error-text">{state.error}</p> : null}
       {state.notice ? <p className="notice">{state.notice}</p> : null}
-      <button className="btn btn-primary" type="submit" disabled={pending} aria-busy={pending}>
+      <button
+        className="btn btn-primary"
+        type="submit"
+        disabled={pending || classes.length === 0}
+        aria-busy={pending}
+      >
         {pending ? "Signing up…" : "Sign up"}
       </button>
     </form>
