@@ -19,7 +19,7 @@ export default async function SignUpPage() {
       <div className="auth-card">
         <h1>Sign up</h1>
         <p className="lede mt-3 text-center">
-          Use the email your instructor added to the class list. Choose your class and password.
+          First choose your name and class, then create your login.
         </p>
         <div className="mt-6">
           <SignUpForm classes={classes} />

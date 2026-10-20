@@ -589,6 +589,32 @@
     color: var(--color-brand-700);
   }
 
+  .auth-steps {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .auth-step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-pill);
+    background: var(--color-border-strong);
+  }
+
+  .auth-step-dot.is-active {
+    background: var(--color-brand-500);
+  }
+
+  .auth-step-actions {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .auth-step-actions .btn {
+    flex: 1;
+  }
+
   .search-row {
     display: flex;
     flex-wrap: wrap;

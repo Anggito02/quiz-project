@@ -6,16 +6,13 @@
   "4": "═══════════════════════════════════════════════════════════════",
   "5": "leaderboard-view.tsx",
   "6": "Same structure as DARK. Change text colors only:",
-  "7": "react",
+  "7": "play-form.tsx",
   "8": "Product Requirements: Financial Management and Strategy Quiz",
   "9": "compilerOptions",
   "10": "roster/actions.ts",
   "11": "quizzes/actions.ts",
-  "12": "Architecture: Financial Management and Strategy Quiz",
   "13": "classes/add-form.tsx",
   "14": "courses/add-form.tsx",
-  "15": "signUp",
-  "16": "Implementation tasks",
   "17": "dirmanquiz-questions_mk2_w2_01_f2e6933a.md",
   "18": "dirmanquiz-questions_mk2_w2_02_03a0f4c0.md",
   "19": "dirmanquiz-questions_mk2_w2_03_f6a7d5e5.md",
@@ -38,7 +35,5 @@
   "36": "AGENTS.md",
   "37": "CLAUDE.md",
   "38": "loading-frame.tsx",
-  "39": "getSupabaseEnv",
-  "40": "Flows",
-  "41": "Functional requirements"
+  "39": "getSupabaseEnv"
 }
