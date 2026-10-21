@@ -78,11 +78,8 @@ function AccountActions({ profile }: { profile: SessionProfile | null }) {
 
   return (
     <div className="topbar-actions">
-      <Link className="btn btn-inverse btn-sm" href="/login">
+      <Link className="btn btn-quiz btn-sm" href="/login">
         Log in
-      </Link>
-      <Link className="btn btn-quiz btn-sm" href="/signup">
-        Sign up
       </Link>
     </div>
   );
@@ -277,7 +274,7 @@ export function AppChrome({
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const collapsed = useSyncExternalStore(subscribeCollapsed, readCollapsed, () => false);
-  const marketing = pathname === "/" || pathname === "/login" || pathname === "/signup";
+  const marketing = pathname === "/" || pathname === "/login";
   const admin = pathname.startsWith("/admin");
 
   function toggleCollapsed() {

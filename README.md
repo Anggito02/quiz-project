@@ -47,16 +47,15 @@ Open **SQL Editor** in the Supabase dashboard. Paste and run each file in this o
 
 Each file should finish with "Success. No rows returned".
 
+Also run later migrations in order when present (`005` through `013`), including `013_student_pin_login.sql` for name + PIN student login.
+
 ## 4. Seed the first admin email
 
-Open `supabase/seed.sql`, replace `admin@example.com` with your own email, then run it in the SQL Editor. Only emails on this list can sign up.
+Open `supabase/seed.sql`, replace the email if needed, then run it in the SQL Editor. That address can log in as an administrator with email and password.
 
 ## 5. Email confirmation
 
-Supabase asks new users to confirm their email by default. Choose one:
-
-- **Simplest for a class:** Authentication > Sign In / Providers > Email, turn off **Confirm email**. People can log in right after sign-up.
-- **Keep confirmation on:** people must click the link in the confirmation email before logging in. Set **Authentication > URL Configuration > Site URL** to the address where the app runs, for example `http://localhost:3000`.
+Supabase asks new users to confirm their email by default. For classroom use, turn off **Confirm email** under Authentication > Sign In / Providers > Email so imported students can log in with their PIN immediately.
 
 ## 6. Run the app
 
@@ -67,7 +66,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000), choose **Sign up**, and register with the admin email from step 4. Then open **Roster** to add your students' emails.
+Open [http://localhost:3000](http://localhost:3000), choose **Admin login**, and sign in with the admin email from step 4. Then open **Roster**, import `data/data-serdik-kelas.xlsx`, and students can log in by class, name, and PIN. Set `SUPABASE_SERVICE_ROLE_KEY` in `.env.local` before importing.
 
 To run in Docker instead, skip the Node.js commands and use the next section. Steps 2–5 stay the same.
 

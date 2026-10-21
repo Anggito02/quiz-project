@@ -1,12 +1,12 @@
 "use client";
 
 import { useActionState } from "react";
-import { logIn, type LoginState } from "./actions";
+import { logInAdmin, type LoginState } from "./actions";
 
 const initialState: LoginState = {};
 
-export function LoginForm() {
-  const [state, action, pending] = useActionState(logIn, initialState);
+export function AdminLoginForm() {
+  const [state, action, pending] = useActionState(logInAdmin, initialState);
 
   return (
     <form action={action} className="card grid gap-4">

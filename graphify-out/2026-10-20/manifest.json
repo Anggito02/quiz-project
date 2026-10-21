@@ -162,15 +162,15 @@
     "semantic_hash": ""
   },
   "app/signup/page.tsx": {
-    "mtime": 1792470719.2682695,
-    "seen": 1792471319.3617113,
-    "ast_hash": "6e97872c76c4f954361bddb6679da484",
+    "mtime": 1792472317.552403,
+    "seen": 1792472410.9917073,
+    "ast_hash": "276eaeceef997e98ba7e395cf9bae2c5",
     "semantic_hash": ""
   },
   "app/signup/signup-form.tsx": {
-    "mtime": 1792470711.764657,
-    "seen": 1792471319.3617113,
-    "ast_hash": "563d49aeecca60564812819f3c7af374",
+    "mtime": 1792472356.8954146,
+    "seen": 1792472410.9917073,
+    "ast_hash": "193e72aa6673e0de4c7a0d33d80d75d6",
     "semantic_hash": ""
   },
   "components/site-nav.tsx": {

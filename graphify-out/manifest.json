@@ -12,10 +12,10 @@
     "semantic_hash": "188941631544569959086241bf96266e"
   },
   "app/admin/classes/page.tsx": {
-    "mtime": 1791871725.1940596,
-    "seen": 1791879978.605563,
-    "ast_hash": "ae64fda1ab4ec7f5e6b932ce220d555e",
-    "semantic_hash": "ae64fda1ab4ec7f5e6b932ce220d555e"
+    "mtime": 1792544353.2850513,
+    "seen": 1792544528.7767956,
+    "ast_hash": "1f7dc4daebe103f514c7d7a4a5da4ca4",
+    "semantic_hash": ""
   },
   "app/admin/courses/actions.ts": {
     "mtime": 1791871725.1930614,
@@ -96,21 +96,21 @@
     "semantic_hash": "cf897435ed4eff1c64205edbfafa7f74"
   },
   "app/admin/roster/actions.ts": {
-    "mtime": 1792458140.135638,
-    "seen": 1792463503.3620744,
-    "ast_hash": "40678141615135ab5bc5d5c65eb1e243",
+    "mtime": 1792542815.7922142,
+    "seen": 1792543558.5273175,
+    "ast_hash": "bc265afe596f639b64af31c22dc2112a",
     "semantic_hash": ""
   },
   "app/admin/roster/add-form.tsx": {
-    "mtime": 1792458141.8500597,
-    "seen": 1792463503.3620744,
-    "ast_hash": "c8bbbc0bcfd61bb3854d38603d87ea73",
+    "mtime": 1792486268.7192461,
+    "seen": 1792487148.6499352,
+    "ast_hash": "1ccdb816c697cd3ada09f04c1e9f2b47",
     "semantic_hash": ""
   },
   "app/admin/roster/page.tsx": {
-    "mtime": 1792458143.4266293,
-    "seen": 1792463503.3620744,
-    "ast_hash": "08348669d1de2f44698de72d01d4d3ff",
+    "mtime": 1792486379.4281745,
+    "seen": 1792487148.6499352,
+    "ast_hash": "9c7d26a18cb785746ea764ffa4b5abb5",
     "semantic_hash": ""
   },
   "app/auth/logout.ts": {
@@ -126,28 +126,22 @@
     "semantic_hash": ""
   },
   "app/login/actions.ts": {
-    "mtime": 1791441939.841147,
-    "seen": 1791617265.9094,
-    "ast_hash": "27b85de59c205520729a1bd2d484b05f",
-    "semantic_hash": "27b85de59c205520729a1bd2d484b05f"
-  },
-  "app/login/login-form.tsx": {
-    "mtime": 1792138779.3986986,
-    "seen": 1792141736.3014555,
-    "ast_hash": "60176e29e60ad6b862633d5b39b56047",
+    "mtime": 1792542812.833256,
+    "seen": 1792543558.5353217,
+    "ast_hash": "62381cb955b8d6de53ae1fc96aa025c2",
     "semantic_hash": ""
   },
   "app/login/page.tsx": {
-    "mtime": 1791862559.5034876,
-    "seen": 1791879978.608576,
-    "ast_hash": "9aa7a9060432118bc57bb51b7f3c9aa0",
-    "semantic_hash": "9aa7a9060432118bc57bb51b7f3c9aa0"
+    "mtime": 1792486215.5532234,
+    "seen": 1792487148.6659787,
+    "ast_hash": "6812c702cf7c65e7952b5728603bc977",
+    "semantic_hash": ""
   },
   "app/page.tsx": {
-    "mtime": 1791871725.1749208,
-    "seen": 1791879978.608576,
-    "ast_hash": "3e08ddbaa301117b08df19b85e8b841e",
-    "semantic_hash": "3e08ddbaa301117b08df19b85e8b841e"
+    "mtime": 1792486306.7609496,
+    "seen": 1792487148.6659787,
+    "ast_hash": "c6af7ed55c123015536d0410801f83de",
+    "semantic_hash": ""
   },
   "app/quizzes/page.tsx": {
     "mtime": 1792142218.3500473,
@@ -155,28 +149,10 @@
     "ast_hash": "8119cc3a9f030e5b2534388aac6bc585",
     "semantic_hash": ""
   },
-  "app/signup/actions.ts": {
-    "mtime": 1792470711.3139138,
-    "seen": 1792471319.3617113,
-    "ast_hash": "38e05fb54a30bfbc6ee8c85cdff4d4a1",
-    "semantic_hash": ""
-  },
-  "app/signup/page.tsx": {
-    "mtime": 1792472317.552403,
-    "seen": 1792472410.9917073,
-    "ast_hash": "276eaeceef997e98ba7e395cf9bae2c5",
-    "semantic_hash": ""
-  },
-  "app/signup/signup-form.tsx": {
-    "mtime": 1792472356.8954146,
-    "seen": 1792472410.9917073,
-    "ast_hash": "193e72aa6673e0de4c7a0d33d80d75d6",
-    "semantic_hash": ""
-  },
   "components/site-nav.tsx": {
-    "mtime": 1792470714.706847,
-    "seen": 1792471319.4613907,
-    "ast_hash": "2d7cde3ebdefe2ddc27330f8174289b5",
+    "mtime": 1792544350.909477,
+    "seen": 1792544528.85089,
+    "ast_hash": "4a04e679a8e26a90665d25ceab4bb81c",
     "semantic_hash": ""
   },
   "eslint.config.mjs": {
@@ -204,9 +180,9 @@
     "semantic_hash": "de904938bb85463bb0913ff266fa4188"
   },
   "lib/session.ts": {
-    "mtime": 1792462055.097401,
-    "seen": 1792463503.4080799,
-    "ast_hash": "096afb360829aef86d33825493db1bb9",
+    "mtime": 1792486219.6100483,
+    "seen": 1792487148.761941,
+    "ast_hash": "24db12faa18b4047f4eafe237dbae0a9",
     "semantic_hash": ""
   },
   "lib/supabase/client.ts": {
@@ -384,9 +360,9 @@
     "semantic_hash": "23462bb430c4a36a77d0069043a3ddc6"
   },
   "README.md": {
-    "mtime": 1791871902.4773624,
-    "seen": 1791876160.298419,
-    "ast_hash": "0ba4435e99c8c019826701bc1d4a997a",
+    "mtime": 1792544354.0284674,
+    "seen": 1792544528.8703396,
+    "ast_hash": "c5fe836db34598ecbc547298a3574a74",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
@@ -731,22 +707,52 @@
     "ast_hash": "cf29e3933b79b3dad729fa0c3f398fee",
     "semantic_hash": ""
   },
-  "app/profile/actions.ts": {
-    "mtime": 1792468078.8411996,
-    "seen": 1792471319.306737,
-    "ast_hash": "04ed0f9784fb09da33319679a95445cf",
-    "semantic_hash": ""
-  },
-  "app/profile/class-form.tsx": {
-    "mtime": 1792468085.623429,
-    "seen": 1792471319.306737,
-    "ast_hash": "2ae59b9dc7422982098f1f6f60757934",
-    "semantic_hash": ""
-  },
   "app/profile/page.tsx": {
-    "mtime": 1792468090.3825572,
-    "seen": 1792471319.306737,
-    "ast_hash": "0dfd09fc1feef468fdcfe429e2962827",
+    "mtime": 1792544351.7039013,
+    "seen": 1792544528.8153217,
+    "ast_hash": "d159096e812fc686722b59438a5f29d3",
+    "semantic_hash": ""
+  },
+  "app/admin/roster/import-form.tsx": {
+    "mtime": 1792544350.2076483,
+    "seen": 1792544528.802795,
+    "ast_hash": "421fc29f0cab239afa951d5f4a1f6a41",
+    "semantic_hash": ""
+  },
+  "app/login/admin-form.tsx": {
+    "mtime": 1792544352.553203,
+    "seen": 1792544528.8117976,
+    "ast_hash": "d4a7818c12240392a9b17fbb9e94bb3d",
+    "semantic_hash": ""
+  },
+  "app/login/student-form.tsx": {
+    "mtime": 1792544352.7574234,
+    "seen": 1792544528.8137972,
+    "ast_hash": "30b22b79828d97597aaeccb9fe648a9d",
+    "semantic_hash": ""
+  },
+  "lib/serdik-excel.ts": {
+    "mtime": 1792544352.415838,
+    "seen": 1792544528.8573291,
+    "ast_hash": "2db77104f050e73355965252c3d86de7",
+    "semantic_hash": ""
+  },
+  "lib/serdik.ts": {
+    "mtime": 1792544352.0813217,
+    "seen": 1792544528.8573291,
+    "ast_hash": "acdf09e3683d89694e9ed132f2c64978",
+    "semantic_hash": ""
+  },
+  "lib/supabase/admin.ts": {
+    "mtime": 1792544352.2491348,
+    "seen": 1792544528.8583243,
+    "ast_hash": "cc645d143dc0226c1ccc4cfa410c79b8",
+    "semantic_hash": ""
+  },
+  "scripts/generate-serdik-seed.mjs": {
+    "mtime": 1792544354.2072806,
+    "seen": 1792544528.8653297,
+    "ast_hash": "b94b1d3b79b06f4f17317fc7dadafd09",
     "semantic_hash": ""
   }
 }

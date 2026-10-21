@@ -17,8 +17,8 @@ export default async function Home() {
             Start quiz
           </Link>
         ) : (
-          <Link className="btn btn-quiz" href="/signup">
-            Sign up
+          <Link className="btn btn-quiz" href="/login">
+            Log in
           </Link>
         )}
       </div>

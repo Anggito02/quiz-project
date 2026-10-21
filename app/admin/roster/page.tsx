@@ -1,77 +1,93 @@
 import { createClient } from "@/lib/supabase/server";
 import { AddEmailForm } from "./add-form";
-import { removeEmail, updateRole } from "./actions";
+import { ImportStudentsForm } from "./import-form";
+import { removeEmail } from "./actions";
+
+export const maxDuration = 300;
 
 type AllowlistRow = {
   email: string;
   role: "admin" | "student";
+};
+
+type StudentRow = {
+  id: string;
+  display_name: string;
+  student_number: string;
   class_id: string | null;
 };
 
 export default async function RosterPage() {
   const supabase = await createClient();
-  const [{ data }, { data: classData }] = await Promise.all([
-    supabase.from("allowed_emails").select("email, role, class_id").order("email", { ascending: true }),
-    supabase.from("classes").select("id, name").order("name", { ascending: true }),
+  const [{ data }, { data: studentData }, { data: classData }] = await Promise.all([
+    supabase.from("allowed_emails").select("email, role").eq("role", "admin").order("email", {
+      ascending: true,
+    }),
+    supabase
+      .from("profiles")
+      .select("id, display_name, student_number, class_id")
+      .eq("role", "student")
+      .not("student_number", "is", null)
+      .order("display_name", { ascending: true }),
+    supabase.from("classes").select("id, name"),
   ]);
 
-  const rows = (data ?? []) as AllowlistRow[];
-  const classes = (classData ?? []) as { id: string; name: string }[];
+  const admins = (data ?? []) as AllowlistRow[];
+  const students = (studentData ?? []) as StudentRow[];
+  const classNames = new Map((classData ?? []).map((row) => [row.id, row.name]));
 
   return (
     <main className="page">
       <h1>Roster</h1>
       <p className="mt-4 max-w-[72ch]">
-        Add the emails that may sign up, and set each email&apos;s role and class. A rule such as
-        *@corp.gmail.com allows every address at that domain. An exact email overrides a rule.
-        People choose their own password at sign-up.
+        Import the class Excel file so students can log in with their name and PIN. Administrators
+        still sign in with email and password.
       </p>
-      <AddEmailForm classes={classes} />
+      <ImportStudentsForm />
+      <AddEmailForm />
 
-      {rows.length === 0 ? (
-        <p className="mt-8">No emails on the class list yet.</p>
+      <h2 className="mt-10">Students</h2>
+      {students.length === 0 ? (
+        <p className="mt-4">No students imported yet.</p>
       ) : (
-        <div className="table-wrap mt-8 overflow-x-auto">
+        <div className="table-wrap mt-4 overflow-x-auto">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              {students.map((row) => (
+                <tr key={row.id}>
+                  <td>{row.student_number}</td>
+                  <td>{row.display_name}</td>
+                  <td>{classNames.get(row.class_id ?? "") ?? "No class"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      <h2 className="mt-10">Admins</h2>
+      {admins.length === 0 ? (
+        <p className="mt-4">No admin emails yet.</p>
+      ) : (
+        <div className="table-wrap mt-4 overflow-x-auto">
           <table className="table">
             <thead>
               <tr>
                 <th>Email</th>
-                <th>Role and class</th>
                 <th>Remove</th>
               </tr>
             </thead>
             <tbody>
-              {rows.map((row) => (
+              {admins.map((row) => (
                 <tr key={row.email}>
-                  <td>
-                    {row.email}
-                    {row.email.includes("*") ? <div className="muted">Wildcard</div> : null}
-                  </td>
-                  <td>
-                    <form action={updateRole} className="flex flex-wrap items-center gap-2">
-                      <input type="hidden" name="email" value={row.email} />
-                      <select className="input" name="role" defaultValue={row.role} aria-label="Role">
-                        <option value="student">Student</option>
-                        <option value="admin">Admin</option>
-                      </select>
-                      <select
-                        className="input"
-                        name="classId"
-                        defaultValue={row.class_id ?? ""}
-                        aria-label="Class"
-                      >
-                        <option value="">No class</option>
-                        {classes.map((item) => (
-                          <option key={item.id} value={item.id}>
-                            {item.name}
-                          </option>
-                        ))}
-                      </select>
-                      <button className="btn btn-admin btn-sm" type="submit">
-                        Save
-                      </button>
-                    </form>
-                  </td>
+                  <td>{row.email}</td>
                   <td>
                     <form action={removeEmail}>
                       <input type="hidden" name="email" value={row.email} />
@@ -89,3 +105,4 @@ export default async function RosterPage() {
     </main>
   );
 }
+

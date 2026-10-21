@@ -15,7 +15,7 @@ export default async function ClassesPage() {
     <main className="page">
       <h1>Classes</h1>
       <p className="mt-4 max-w-[72ch]">
-        Add the class names you can assign to an email on the roster. People pick up that class when they sign up.
+        Add the class names assigned when you import the student Excel file.
       </p>
       <AddClassForm />
       {classes.length === 0 ? (

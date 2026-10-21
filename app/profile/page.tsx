@@ -1,23 +1,26 @@
 import { redirect } from "next/navigation";
 import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
-import { ClassForm } from "./class-form";
 
 export default async function ProfilePage() {
   const profile = await getSessionProfile();
   if (!profile) redirect("/login");
 
   const supabase = await createClient();
-  const [{ data: profileRow }, { data: classRows }, { data: canChooseClass }] =
-    await Promise.all([
-      supabase.from("profiles").select("class_id").eq("id", profile.id).single(),
-      supabase.from("classes").select("id, name").order("name", { ascending: true }),
-      supabase.rpc("can_choose_own_class"),
-    ]);
+  const { data: profileRow } = await supabase
+    .from("profiles")
+    .select("class_id, student_number")
+    .eq("id", profile.id)
+    .single();
 
-  const classes = (classRows ?? []) as { id: string; name: string }[];
-  const currentClassId = (profileRow as { class_id: string | null } | null)?.class_id ?? null;
-  const currentClass = classes.find((row) => row.id === currentClassId)?.name ?? "No class";
+  const classId = (profileRow as { class_id: string | null } | null)?.class_id ?? null;
+  const studentNumber =
+    (profileRow as { student_number: string | null } | null)?.student_number ?? null;
+  let currentClass = "No class";
+  if (classId) {
+    const { data: classRow } = await supabase.from("classes").select("name").eq("id", classId).maybeSingle();
+    currentClass = classRow?.name ?? "No class";
+  }
 
   return (
     <main className="page">
@@ -27,19 +30,21 @@ export default async function ProfilePage() {
           <p className="label">Display name</p>
           <p className="mt-2">{profile.displayName}</p>
         </div>
-        <div>
-          <p className="label">Email</p>
-          <p className="mt-2">{profile.email}</p>
-        </div>
-        {canChooseClass ? (
-          <ClassForm classes={classes} currentClassId={currentClassId} />
+        {profile.role === "admin" ? (
+          <div>
+            <p className="label">Email</p>
+            <p className="mt-2">{profile.email}</p>
+          </div>
         ) : (
           <div>
-            <p className="label">Class</p>
-            <p className="mt-2">{currentClass}</p>
-            <p className="muted mt-2">This class is managed by the administrator.</p>
+            <p className="label">Student number</p>
+            <p className="mt-2">{studentNumber ?? "—"}</p>
           </div>
         )}
+        <div>
+          <p className="label">Class</p>
+          <p className="mt-2">{currentClass}</p>
+        </div>
       </div>
     </main>
   );
