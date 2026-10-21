@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { revalidateLeaderboardScores } from "@/lib/leaderboard-board";
 import { createClient } from "@/lib/supabase/server";
 
 export async function resetLeaderboard(formData: FormData) {
@@ -38,6 +39,7 @@ export async function resetLeaderboard(formData: FormData) {
 
   revalidatePath("/leaderboard");
   revalidatePath("/admin/leaderboard");
+  revalidateLeaderboardScores();
   if (quizId) {
     revalidatePath("/quizzes");
     revalidatePath(`/quizzes/${quizId}`, "layout");

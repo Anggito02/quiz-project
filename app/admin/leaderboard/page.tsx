@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { LeaderboardView } from "@/components/leaderboard-view";
 import { LeaderboardLoading } from "@/components/loading-frame";
-import { SearchParamsPending } from "@/components/search-params-pending";
 import { getSessionProfile } from "@/lib/session";
 
 type BoardParams = {
@@ -13,17 +12,6 @@ type BoardParams = {
   reset?: string;
   error?: string;
 };
-
-function boardKey(params: BoardParams) {
-  return [
-    params.quiz ?? "",
-    params.course ?? "",
-    params.class ?? "",
-    params.minutes ?? "",
-    params.reset ?? "",
-    params.error ?? "",
-  ].join("|");
-}
 
 async function AdminLeaderboardBoard({
   params,
@@ -75,10 +63,8 @@ export default async function AdminLeaderboardPage({
   const params = await searchParams;
 
   return (
-    <Suspense key={boardKey(params)} fallback={<LeaderboardLoading tone="light" />}>
-      <SearchParamsPending fallback={<LeaderboardLoading tone="light" />}>
-        <AdminLeaderboardBoard params={params} currentUserId={profile.id} />
-      </SearchParamsPending>
+    <Suspense fallback={<LeaderboardLoading tone="light" />}>
+      <AdminLeaderboardBoard params={params} currentUserId={profile.id} />
     </Suspense>
   );
 }

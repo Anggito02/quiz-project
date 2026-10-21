@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { revalidateLeaderboardScores } from "@/lib/leaderboard-board";
 import { createClient } from "@/lib/supabase/server";
 
 export type UnlimitedState = {
@@ -66,5 +67,6 @@ export async function submitUnlimited(
 
   revalidatePath(`/unlimited/${sessionId}`);
   revalidatePath("/unlimited");
+  revalidateLeaderboardScores();
   redirect(`/unlimited/${sessionId}`);
 }

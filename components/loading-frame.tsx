@@ -137,6 +137,19 @@ export function ResultLoading() {
   );
 }
 
+export function LeaderboardResultsLoading() {
+  return (
+    <section className="board-panel" aria-busy="true">
+      <p className="sr-only">Loading leaderboard</p>
+      <div aria-hidden="true">
+        <Bone className="skeleton-title is-page" />
+        <Bone className="skeleton-title" />
+        <TableRows />
+      </div>
+    </section>
+  );
+}
+
 export function LeaderboardLoading({ tone = "dark" }: { tone?: "dark" | "light" }) {
   return (
     <LoadingShell tone={tone}>
@@ -161,11 +174,7 @@ export function LeaderboardLoading({ tone = "dark" }: { tone?: "dark" | "light" 
             ))}
           </div>
         </section>
-        <section className="board-panel">
-          <Bone className="skeleton-title is-page" />
-          <Bone className="skeleton-title" />
-          <TableRows />
-        </section>
+        <LeaderboardResultsLoading />
       </div>
     </LoadingShell>
   );

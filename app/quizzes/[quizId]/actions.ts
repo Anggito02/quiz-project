@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { revalidateLeaderboardScores } from "@/lib/leaderboard-board";
 import { createClient } from "@/lib/supabase/server";
 
 export type SubmitState = {
@@ -40,5 +41,6 @@ export async function submitQuiz(_state: SubmitState, formData: FormData): Promi
   }
 
   revalidatePath(`/quizzes/${quizId}`);
+  revalidateLeaderboardScores();
   redirect(`/quizzes/${quizId}/attempts/${data}`);
 }
