@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { resolveCourseId } from "@/app/admin/quizzes/actions";
 import { MAX_IMPORT_BYTES, parseQuizWorkbook } from "@/lib/quiz-excel";
+import { revalidateQuizCatalog } from "@/lib/quiz-catalog";
 import { cleanOptions, validateQuestion, type OptionDraft, type QuestionType } from "@/lib/quiz-validation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -65,6 +66,7 @@ export async function updateQuiz(
   revalidatePath(quizPath(quizId));
   revalidatePath("/admin/quizzes");
   revalidatePath("/quizzes");
+  revalidateQuizCatalog();
   return { notice: "Quiz saved." };
 }
 

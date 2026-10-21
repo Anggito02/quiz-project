@@ -39,6 +39,17 @@ function CardGrid() {
   );
 }
 
+export function QuizCardsLoading() {
+  return (
+    <section className="course-group" aria-busy="true">
+      <p className="sr-only">Loading quizzes</p>
+      <div aria-hidden="true">
+        <CardGrid />
+      </div>
+    </section>
+  );
+}
+
 function TableRows({ count = 5 }: { count?: number }) {
   return (
     <div className="table-wrap">

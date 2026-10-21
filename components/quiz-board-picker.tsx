@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { markSearchParamsPending } from "@/components/search-params-pending";
 
 type QuizOption = {
   id: string;
@@ -58,6 +59,7 @@ export function QuizBoardPicker({
     next.set("quiz", quiz.id);
     setQuery(quiz.title);
     setOpen(false);
+    markSearchParamsPending();
     router.push(`${basePath}?${next.toString()}`);
   }
 

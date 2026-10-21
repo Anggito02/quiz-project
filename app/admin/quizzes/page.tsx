@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import { AdminLoading } from "@/components/loading-frame";
+import { SearchParamsPending } from "@/components/search-params-pending";
 import { createClient } from "@/lib/supabase/server";
 import { CreateQuizForm } from "./create-form";
 
@@ -32,12 +35,7 @@ function groupByCourse(quizzes: QuizRow[]) {
   });
 }
 
-export default async function QuizBuilderPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: string }>;
-}) {
-  const { page: pageParam } = await searchParams;
+async function QuizBuilderCatalog({ pageParam }: { pageParam?: string }) {
   const requestedPage = Number(pageParam);
   const page = Number.isInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
   const from = (page - 1) * PAGE_SIZE;
@@ -102,5 +100,21 @@ export default async function QuizBuilderPage({
         </nav>
       ) : null}
     </main>
+  );
+}
+
+export default async function QuizBuilderPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+
+  return (
+    <Suspense key={pageParam ?? "1"} fallback={<AdminLoading />}>
+      <SearchParamsPending fallback={<AdminLoading />}>
+        <QuizBuilderCatalog pageParam={pageParam} />
+      </SearchParamsPending>
+    </Suspense>
   );
 }

@@ -4,13 +4,13 @@
   "2": "admin/quizzes/[quizId]/actions.ts",
   "3": "Architecture: Financial Management and Strategy Quiz",
   "4": "COLOR TOKENS",
-  "5": "leaderboard-view.tsx",
+  "5": "next",
   "6": "Same structure as DARK. Change text colors only:",
-  "7": "[sessionId]/page.tsx",
+  "7": "play-form.tsx",
   "8": "Product Requirements: Financial Management and Strategy Quiz",
   "9": "compilerOptions",
   "10": "roster/actions.ts",
-  "11": "quizzes/actions.ts",
+  "11": "app/quizzes/page.tsx",
   "12": "═══════════════════════════════════════════════════════════════",
   "13": "classes/add-form.tsx",
   "14": "courses/add-form.tsx",
@@ -41,5 +41,6 @@
   "39": "LOGO ASSETS (inline SVG — paste directly into HTML)",
   "40": "Architecture.md",
   "41": "site-nav.tsx",
-  "42": "getSupabaseEnv"
+  "42": "generate-serdik-seed.mjs",
+  "43": "admin/quizzes/page.tsx"
 }

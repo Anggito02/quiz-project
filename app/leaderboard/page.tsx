@@ -1,28 +1,54 @@
+import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { LeaderboardView } from "@/components/leaderboard-view";
+import { LeaderboardLoading } from "@/components/loading-frame";
+import { SearchParamsPending } from "@/components/search-params-pending";
 import { getSessionProfile } from "@/lib/session";
 
-export default async function LeaderboardPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ quiz?: string; minutes?: string; course?: string; class?: string }>;
-}) {
-  const profile = await getSessionProfile();
-  if (!profile) redirect("/login");
+type BoardParams = { quiz?: string; minutes?: string; course?: string; class?: string };
 
-  const { quiz, minutes, course, class: classId } = await searchParams;
-  const duration = Number(minutes);
+function boardKey(params: BoardParams) {
+  return [params.quiz ?? "", params.course ?? "", params.class ?? "", params.minutes ?? ""].join("|");
+}
+
+async function LeaderboardBoard({
+  params,
+  currentUserId,
+}: {
+  params: BoardParams;
+  currentUserId: string;
+}) {
+  const duration = Number(params.minutes);
 
   return (
     <main className="page">
       <LeaderboardView
         basePath="/leaderboard"
-        quizId={quiz}
-        courseId={course}
-        classId={classId}
+        quizId={params.quiz}
+        courseId={params.course}
+        classId={params.class}
         minutes={Number.isFinite(duration) ? duration : undefined}
-        currentUserId={profile.id}
+        currentUserId={currentUserId}
       />
     </main>
+  );
+}
+
+export default async function LeaderboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<BoardParams>;
+}) {
+  const profile = await getSessionProfile();
+  if (!profile) redirect("/login");
+
+  const params = await searchParams;
+
+  return (
+    <Suspense key={boardKey(params)} fallback={<LeaderboardLoading />}>
+      <SearchParamsPending fallback={<LeaderboardLoading />}>
+        <LeaderboardBoard params={params} currentUserId={profile.id} />
+      </SearchParamsPending>
+    </Suspense>
   );
 }

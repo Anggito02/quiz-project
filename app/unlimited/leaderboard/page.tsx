@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { redirect } from "next/navigation";
+import { BoardPageLoading } from "@/components/loading-frame";
 import { LeaderboardTable, type LeaderboardEntry } from "@/components/leaderboard-table";
+import { SearchParamsPending } from "@/components/search-params-pending";
 import { getSessionProfile } from "@/lib/session";
 import { createClient } from "@/lib/supabase/server";
 
@@ -12,15 +15,13 @@ type BoardRow = {
   submitted_at: string;
 };
 
-export default async function UnlimitedLeaderboardPage({
-  searchParams,
+async function UnlimitedLeaderboardBoard({
+  minutes,
+  currentUserId,
 }: {
-  searchParams: Promise<{ minutes?: string }>;
+  minutes?: string;
+  currentUserId: string;
 }) {
-  const profile = await getSessionProfile();
-  if (!profile) redirect("/login");
-
-  const { minutes } = await searchParams;
   const duration = minutes === "10" || minutes === "20" ? Number(minutes) : 5;
   const supabase = await createClient();
   const { data } = await supabase.rpc("unlimited_leaderboard", { p_duration: duration });
@@ -52,11 +53,30 @@ export default async function UnlimitedLeaderboardPage({
         </p>
         <LeaderboardTable
           entries={entries}
-          currentUserId={profile.id}
+          currentUserId={currentUserId}
           valueHeading="Correct"
           summary="Ranked by correct answers. The top 100 are shown. A run only appears on the board for its own time limit."
         />
       </section>
     </main>
+  );
+}
+
+export default async function UnlimitedLeaderboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ minutes?: string }>;
+}) {
+  const profile = await getSessionProfile();
+  if (!profile) redirect("/login");
+
+  const { minutes } = await searchParams;
+
+  return (
+    <Suspense key={minutes ?? "5"} fallback={<BoardPageLoading />}>
+      <SearchParamsPending fallback={<BoardPageLoading />}>
+        <UnlimitedLeaderboardBoard minutes={minutes} currentUserId={profile.id} />
+      </SearchParamsPending>
+    </Suspense>
   );
 }

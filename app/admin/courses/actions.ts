@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { revalidateQuizCatalog } from "@/lib/quiz-catalog";
 import { createClient } from "@/lib/supabase/server";
 
 export type CatalogState = {
@@ -31,6 +32,7 @@ export async function addCourse(
 
   revalidatePath("/admin/courses");
   revalidatePath("/admin/quizzes");
+  revalidateQuizCatalog();
   return {};
 }
 
@@ -51,5 +53,6 @@ export async function removeCourse(
   revalidatePath("/admin/courses");
   revalidatePath("/admin/quizzes");
   revalidatePath("/quizzes");
+  revalidateQuizCatalog();
   return {};
 }

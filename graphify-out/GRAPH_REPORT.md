@@ -1,17 +1,17 @@
 # Graph Report - quiz-project  (2026-10-21)
 
 ## Corpus Check
-- 124 files · ~119,709 words
+- 128 files · ~120,769 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 3, .example 1, .css 1)
 
 ## Summary
-- 573 nodes · 1070 edges · 43 communities (21 shown, 22 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 19 edges (avg confidence: 0.85)
+- 606 nodes · 1183 edges · 44 communities (22 shown, 22 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d2ad9c96`
+- Built from commit: `467a3c97`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,16 +21,16 @@
 - admin/quizzes/[quizId]/actions.ts
 - Architecture: Financial Management and Strategy Quiz
 - COLOR TOKENS
-- login/actions.ts
+- react
 - Same structure as DARK. Change text colors only:
-- app/quizzes/page.tsx
+- app/quizzes/[quizId]/page.tsx
 - Product Requirements: Financial Management and Strategy Quiz
 - compilerOptions
-- react
-- quizzes/actions.ts
+- roster/actions.ts
+- quiz-catalog.ts
 - ═══════════════════════════════════════════════════════════════
 - classes/add-form.tsx
-- courses/add-form.tsx
+- courses/actions.ts
 - DirmanQuiz
 - Implementation tasks
 - dirmanquiz-questions_mk2_w2_01_f2e6933a.md
@@ -57,18 +57,19 @@
 - LOGO ASSETS (inline SVG — paste directly into HTML)
 - site-nav.tsx
 - generate-serdik-seed.mjs
+- admin/quizzes/page.tsx
 
 ## God Nodes (most connected - your core abstractions)
-1. `createClient()` - 59 edges
-2. `next` - 38 edges
+1. `createClient()` - 57 edges
+2. `next` - 41 edges
 3. `getSessionProfile` - 31 edges
-4. `react` - 22 edges
+4. `react` - 28 edges
 5. `compilerOptions` - 16 edges
 6. `═══════════════════════════════════════════════════════════════` - 16 edges
 7. `Same structure as DARK. Change text colors only:` - 15 edges
-8. `AppChrome()` - 14 edges
-9. `LeaderboardView()` - 13 edges
-10. `LeaderboardTable()` - 12 edges
+8. `PendingLink()` - 14 edges
+9. `AppChrome()` - 14 edges
+10. `LeaderboardView()` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `requireAdmin()` --calls--> `createClient()`  [EXTRACTED]
@@ -85,11 +86,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (43 total, 22 thin omitted)
+## Communities (44 total, 22 thin omitted)
 
 ### Community 0 - "createClient"
-Cohesion: 0.07
-Nodes (46): AdminLayout(), resetLeaderboard(), AdminLeaderboardPage(), ResetBoardForms(), logOut(), LeaderboardPage(), ProfilePage(), AttemptPage() (+38 more)
+Cohesion: 0.06
+Nodes (58): AdminLayout(), resetLeaderboard(), logOut(), ClassStudent, listClassStudents(), logInAdmin(), LoginState, logInStudent() (+50 more)
 
 ### Community 1 - "package.json"
 Cohesion: 0.04
@@ -107,17 +108,17 @@ Nodes (11): Application structure, Architecture: Financial Management and Strate
 Cohesion: 0.15
 Nodes (13): Accent (Kuis Lime), Brand (Kuis Indigo), COLOR TOKENS, Dark Quiz Canvas (Learner mode), Every screen must belong to exactly one mode. Do NOT mix visual treatments., MODE 1 — WORKSPACE, MODE 2 — LEARNER / LIVE QUIZ, MODE 3 — MARKETING / DISCOVERY (+5 more)
 
-### Community 5 - "login/actions.ts"
-Cohesion: 0.17
-Nodes (17): ClassStudent, listClassStudents(), logInAdmin(), LoginState, logInStudent(), AdminLoginForm(), initialState, LoginPage() (+9 more)
+### Community 5 - "react"
+Cohesion: 0.10
+Nodes (29): AdminLeaderboardBoard(), AdminLeaderboardPage(), boardKey(), BoardParams, ResetBoardForms(), boardKey(), BoardParams, LeaderboardBoard() (+21 more)
 
 ### Community 6 - "Same structure as DARK. Change text colors only:"
 Cohesion: 0.07
 Nodes (29): ACCESSIBILITY (non-negotiable), Answer Option Tiles (Learner mode), BORDER RADIUS, Buttons, COMPONENT SPECIFICATIONS, CSS TOKEN STARTER, Dialogs & Confirmations, ELEVATION & SHADOWS (+21 more)
 
-### Community 7 - "app/quizzes/page.tsx"
-Cohesion: 0.08
-Nodes (31): catalogHref(), CourseEmbed, courseNameOf(), QuizCard, QuizCards(), QuizzesPage(), searchFilter(), TrendingRow (+23 more)
+### Community 7 - "app/quizzes/[quizId]/page.tsx"
+Cohesion: 0.19
+Nodes (11): readAnswers(), submitQuiz(), SubmitState, countLabel(), formatWhen(), TakeQuizPage(), initialState, Question (+3 more)
 
 ### Community 8 - "Product Requirements: Financial Management and Strategy Quiz"
 Cohesion: 0.08
@@ -127,13 +128,13 @@ Nodes (24): Acceptance examples, Admin builds a quiz, Admin sets who may sign in
 Cohesion: 0.11
 Nodes (18): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+10 more)
 
-### Community 10 - "react"
-Cohesion: 0.11
-Nodes (28): addEmail(), adminClient(), importStudents(), removeEmail(), rosterEntry(), RosterState, AddEmailForm(), initialState (+20 more)
+### Community 10 - "roster/actions.ts"
+Cohesion: 0.12
+Nodes (27): addEmail(), adminClient(), importStudents(), removeEmail(), rosterEntry(), RosterState, AddEmailForm(), initialState (+19 more)
 
-### Community 11 - "quizzes/actions.ts"
-Cohesion: 0.27
-Nodes (10): createQuiz(), QuizFormState, requireAdmin(), resolveCourseId(), CreateQuizForm(), initialState, courseName(), groupByCourse() (+2 more)
+### Community 11 - "quiz-catalog.ts"
+Cohesion: 0.14
+Nodes (24): QuizzesCatalog(), QuizzesPage(), TrendingCards(), PendingLink(), PendingMark(), catalogHref(), QuizCards(), QuizCatalogBoard() (+16 more)
 
 ### Community 12 - "═══════════════════════════════════════════════════════════════"
 Cohesion: 0.18
@@ -143,9 +144,9 @@ Nodes (11): ══════════════════════�
 Cohesion: 0.33
 Nodes (9): addClass(), CatalogState, removeClass(), requireAdmin(), AddClassForm(), initialState, RemoveClassForm(), ClassesPage() (+1 more)
 
-### Community 14 - "courses/add-form.tsx"
-Cohesion: 0.33
-Nodes (9): addCourse(), CatalogState, removeCourse(), requireAdmin(), AddCourseForm(), initialState, RemoveCourseForm(), CourseRow (+1 more)
+### Community 14 - "courses/actions.ts"
+Cohesion: 0.32
+Nodes (10): addCourse(), CatalogState, removeCourse(), requireAdmin(), AddCourseForm(), initialState, RemoveCourseForm(), CourseRow (+2 more)
 
 ### Community 15 - "DirmanQuiz"
 Cohesion: 0.18
@@ -157,39 +158,43 @@ Nodes (9): 1. Scaffold, 2. Schema and RLS, 3. Auth, 4. Quiz builder, 5. Take qui
 
 ### Community 38 - "loading-frame.tsx"
 Cohesion: 0.14
-Nodes (21): Loading(), Loading(), Loading(), Loading(), Loading(), Loading(), Loading(), Loading() (+13 more)
+Nodes (22): Loading(), Loading(), Loading(), Loading(), Loading(), Loading(), Loading(), Loading() (+14 more)
 
 ### Community 39 - "LOGO ASSETS (inline SVG — paste directly into HTML)"
 Cohesion: 0.40
 Nodes (5): Always pair with letter markers AND correct/incorrect iconography., FULL LOCKUP — DARK (for dark/quiz backgrounds), FULL LOCKUP — LIGHT (for workspace / white backgrounds), ICON MARK (24–72px) — Learner mode, favicon, mobile nav, LOGO ASSETS (inline SVG — paste directly into HTML)
 
 ### Community 41 - "site-nav.tsx"
-Cohesion: 0.13
-Nodes (24): jakarta, metadata, RootLayout(), Home(), AmbientBackdrop(), KuisLetterMark(), KuisLockup(), KuisMark() (+16 more)
+Cohesion: 0.14
+Nodes (23): jakarta, metadata, RootLayout(), Home(), AmbientBackdrop(), KuisLetterMark(), KuisLockup(), KuisMark() (+15 more)
 
 ### Community 42 - "generate-serdik-seed.mjs"
 Cohesion: 0.23
 Nodes (9): cellText(), classes, classValues, numberFromCell(), pinFromCell(), rows, seedValues, sqlStr() (+1 more)
 
+### Community 43 - "admin/quizzes/page.tsx"
+Cohesion: 0.25
+Nodes (11): createQuiz(), QuizFormState, requireAdmin(), resolveCourseId(), CreateQuizForm(), initialState, courseName(), groupByCourse() (+3 more)
+
 ## Knowledge Gaps
 - **6 isolated node(s):** `@tailwindcss/postcss`, `@types/node`, `@types/react`, `@types/react-dom`, `tailwindcss` (+1 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 259 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 261 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `next` connect `createClient` to `package.json`, `admin/quizzes/[quizId]/actions.ts`, `login/actions.ts`, `app/quizzes/page.tsx`, `site-nav.tsx`, `react`, `quizzes/actions.ts`, `classes/add-form.tsx`, `courses/add-form.tsx`?**
-  _High betweenness centrality (0.099) - this node is a cross-community bridge._
+- **Why does `next` connect `createClient` to `package.json`, `admin/quizzes/[quizId]/actions.ts`, `react`, `app/quizzes/[quizId]/page.tsx`, `site-nav.tsx`, `roster/actions.ts`, `admin/quizzes/page.tsx`, `quiz-catalog.ts`, `classes/add-form.tsx`, `courses/actions.ts`?**
+  _High betweenness centrality (0.130) - this node is a cross-community bridge._
 - **What connects `@tailwindcss/postcss`, `@types/node`, `@types/react` to the rest of the system?**
   _6 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `createClient` be split into smaller, more focused modules?**
-  _Cohesion score 0.06590151795631248 - nodes in this community are weakly interconnected._
-- **Why does `createClient()` connect `createClient` to `admin/quizzes/[quizId]/actions.ts`, `login/actions.ts`, `app/quizzes/page.tsx`, `react`, `quizzes/actions.ts`, `classes/add-form.tsx`, `courses/add-form.tsx`?**
-  _High betweenness centrality (0.083) - this node is a cross-community bridge._
+  _Cohesion score 0.05567765567765568 - nodes in this community are weakly interconnected._
+- **Why does `react` connect `react` to `createClient`, `package.json`, `admin/quizzes/[quizId]/actions.ts`, `app/quizzes/[quizId]/page.tsx`, `site-nav.tsx`, `roster/actions.ts`, `admin/quizzes/page.tsx`, `quiz-catalog.ts`, `classes/add-form.tsx`, `courses/actions.ts`?**
+  _High betweenness centrality (0.086) - this node is a cross-community bridge._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.04440333024976873 - nodes in this community are weakly interconnected._
-- **Why does `react` connect `react` to `createClient`, `package.json`, `admin/quizzes/[quizId]/actions.ts`, `login/actions.ts`, `app/quizzes/page.tsx`, `site-nav.tsx`, `quizzes/actions.ts`, `classes/add-form.tsx`, `courses/add-form.tsx`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
+- **Why does `createClient()` connect `createClient` to `admin/quizzes/[quizId]/actions.ts`, `react`, `app/quizzes/[quizId]/page.tsx`, `roster/actions.ts`, `admin/quizzes/page.tsx`, `classes/add-form.tsx`, `courses/actions.ts`?**
+  _High betweenness centrality (0.082) - this node is a cross-community bridge._
 - **Should `admin/quizzes/[quizId]/actions.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.11295681063122924 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10887949260042283 - nodes in this community are weakly interconnected._
