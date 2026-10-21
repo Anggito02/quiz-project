@@ -145,7 +145,8 @@ export function UnlimitedPlayForm({
             {index + 1}. {question.prompt}
           </h2>
           <p className="learner-progress mt-3">
-            {question.type === "single" ? "Choose one answer." : "Choose every correct answer."}
+            {question.type === "single" ? "Choose one answer." : "Choose every correct answer."} You
+            cannot go back to a previous question in Unlimited.
           </p>
           <AnswerOptions
             questionId={question.id}

@@ -10,12 +10,14 @@ export function LearnerShell({
   counter,
   timer,
   timerLow = false,
+  toolbar,
   children,
 }: {
   progress: number;
   counter: string;
   timer?: string;
   timerLow?: boolean;
+  toolbar?: React.ReactNode;
   children: React.ReactNode;
 }) {
   const shellRef = useRef<HTMLDivElement>(null);
@@ -56,12 +58,15 @@ export function LearnerShell({
         <div className="learner-progress-track" aria-hidden="true">
           <div className="learner-progress-fill" style={{ width }} />
         </div>
-        <p className="learner-meta">
-          <span className="learner-counter">{counter}</span>
-          {timer ? (
-            <span className={timerLow ? "learner-timer is-low" : "learner-timer"}>{timer}</span>
-          ) : null}
-        </p>
+        <div className="learner-topbar-end">
+          <p className="learner-meta">
+            <span className="learner-counter">{counter}</span>
+            {timer ? (
+              <span className={timerLow ? "learner-timer is-low" : "learner-timer"}>{timer}</span>
+            ) : null}
+          </p>
+          {toolbar ? <div className="learner-toolbar">{toolbar}</div> : null}
+        </div>
       </header>
       <div className="learner-main">{children}</div>
     </div>,
